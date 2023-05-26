@@ -1,353 +1,8270 @@
-@font-face{
-  font-family: 'main-font';
-  src: url(../font/NotoSansCJKkr-Regular.otf);
+@charset "utf-8";
+
+/* my favorite의 탭, 검색 */
+.tab-wrap {
+    padding: 10px;
+    margin-bottom: -5px;
+    width: 100%;
+    height: 55px;
+    background: #f1f2f2;
+    position: relative;
 }
+
+.tab-wrap ul {
+    padding-top: 0;
+    width: 100%;
+}
+
+.tab-wrap ul li:first-child {
+    width: 17.27642276422764%;
+    /* 170/984 */
+}
+
+.tab-wrap ul li {
+    float: left;
+    width: 4.7%;
+    /* 110/984 */
+    margin-right: 0.50813008130081%;
+    /* 5/984 */
+}
+
+.tab-wrap.range-slider ul li {
+    margin-right: 0.50813008130081%;
+    /* 5/984 */
+}
+
+.tab-wrap ul li.btn_goal {
+    width: 15%;
+}
+
+.tab-wrap ul li a {
+    display: block;
+    font-size: 0.7778em;
+    /* 14/18 */
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    background: #dcddde;
+    color: #939598;
+}
+
+.tab-wrap ul li a.hover,
+.tab-wrap ul li a.tab-act {
+    background: #4356a4;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-wrap div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 35px;
+}
+
+.tab-wrap div input {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+    width: 191px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border: 1px solid #d1d3d4;
+    font-size: 0.7778em;
+    color: #414042;
+}
+
+input-placeholder {
+    color: #a5a5a5;
+}
+
+::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* 웹킷 전용 속성 */
+input:-moz-placeholder {
+    color: #a5a5a5;
+}
+
+/* 파이어폭스 전용 속성 */
+h2.fav {
+    margin: -1px 0 -8px 10px;
+    float: left;
+    width: 7%;
+    height: 28px;
+    border: 1px solid #248ab2;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    line-height: 28px;
+    font-size: 0.7778em;
+    text-align: center;
+    color: #248ab2;
+    cursor: default;
+}
+
+h2.fav.more {
+    float: right;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+h2.fav.more.type2 {
+    width: 11.81%;
+}
+
+.btn_goal a {
+    display: inline-block;
+    height: 28px;
+    line-height: 26px;
+    float: left;
+    border-radius: 18px;
+    font-size: 0.7778em;
+    width: auto;
+    padding: 0 2%;
+    position: relative;
+    z-index: 10;
+    top: -1px;
+}
+
+.btn_goal a span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/my_goal_sprite.png) no-repeat;
+}
+
+.btn_goal a.act span {
+    background-position: center right;
+}
+
+/* btn-lv1~2 */
+.btn-lv-1_2.act {
+    background: #f76293 !important;
+    color: #fff !important;
+}
+
+/* btn-lv3~8 */
+.btn-lv-3_8.act {
+    background: #663398 !important;
+    color: #fff !important;
+}
+
+/* btn-lv9~14 */
+.btn-lv-9_14.act {
+    background: #ff8516 !important;
+    color: #fff !important;
+}
+
+/* btn-lv15~20 */
+.btn-lv-15_20.act {
+    background: #3fc380 !important;
+    color: #fff !important;
+}
+
+/* btn-lv21~26 */
+.btn-lv-21_26.act {
+    background: #19b5fe !important;
+    color: #fff !important;
+}
+
+/* btn-lv27~30 */
+.btn-lv-27_30.act {
+    background: #f7ca18 !important;
+    color: #fff !important;
+}
+
+li.readersPlusOnly a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+li.readersPlusOnly a span {
+    display: inline-block;
+    width: 17px;
+    height: 23px;
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn_readersPlusOnly.png);
+    margin-left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+li.readersPlusOnly a.tab-act {
+    background: #5eba4a !important;
+}
+
+li.readersPlusOnly a.tab-act span {
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn_readersPlusOnly_act.png);
+    margin-left: 7px;
+}
+
+.tab-wrap li.select {
+    position: static;
+    width: 17%;
+}
+
+.tab-wrap li.select select {
+    width: 100%;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .tab-wrap ul li {
+        width: 14%;
+        /* 110/1004 */
+    }
+
+    .tab-wrap li.select {
+        width: 20%;
+    }
+
+    .tab-wrap div input {
+        width: 164px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tab-wrap ul li:first-child {
+        width: 25%;
+        /* 170/1004 */
+    }
+
+    .tab-wrap ul li {
+        float: left;
+    }
+
+    .tab-wrap div input {
+        width: 100px !important;
+    }
+}
+
+.tab-wrap div button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    background-color: #4356a4;
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn-search.png);
+    cursor: pointer;
+}
+
+/* range-slider.css */
+.tab-wrap.range-slider ul li:first-child {
+    width: 74.87927642276422%;
+}
+
+.tab-wrap.range-slider ul li #slider {
+    width: 81.5%;
+}
+
+.tab-wrap.range-slider ul li {
+    width: 11.17886178861789%;
+    margin-right: 0.50813008130081%;
+}
+
+.tab-wrap.range-slider.books ul li:first-child {
+    width: 55.2%;
+}
+
+.tab-wrap.books ul li {
+    width: 4.7%;
+}
+
+.tab-wrap.books ul li #slider {
+    width: 81.5%;
+}
+
+.tab-wrap.books ul li.btn_goal {
+    width: 11.6%;
+}
+
+.tab-wrap.books ul li.readersPlusOnly {
+    width: 16.1%;
+}
+
+@media screen and (max-width: 900px) {
+    .tab-wrap.range-slider.books ul li {
+        width: 4.7%;
+    }
+
+    .tab-wrap.range-slider.books ul li:first-child {
+        width: 47%;
+    }
+
+    .tab-wrap.books ul li.btn_goal {
+        width: 14.6%;
+    }
+
+    .tab-wrap.range-slider.books ul li.readersPlusOnly {
+        width: 21.7%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tab-wrap.range-slider ul li:first-child {
+        display: block;
+        width: 100% !important;
+    }
+}
+
+/* my favorite 책 없을 때 */
+.add-book {
+    width: 100%;
+    height: 360px;
+    margin-top: 15px;
+    border: 1px solid #d1d3d4;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/addbook-bg.png) bottom right no-repeat;
+}
+
+.add-book a {
+    display: block;
+    width: 215px;
+    height: 105px;
+    padding: 20px;
+    margin: 118px auto 0;
+}
+
+.no-centent a,
+.no-centent-letter a {
+    width: 496px;
+}
+
+header.mypage {
+    height: 49px;
+}
+
+.history-graph {
+    padding: 0 0 0;
+}
+
+.graph-wrap {
+    padding: 20px;
+    background: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+
+.graph-wrap h2 {
+    padding-top: 18px;
+    color: #58595b;
+    font-size: 1em;
+    text-align: center;
+}
+
+.graph {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    padding: 30px 40px 0 35px;
+}
+
+.graph-txt {
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    padding: 0 55px 0 65px;
+    top: 318px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    /* 984/1024 */
+}
+
+.graph-txt h3 {
+    float: left;
+    font-size: 0.8889em;
+    /* 16/18 */
+    color: #909090;
+    width: 10%;
+    text-align: center;
+}
+
+.graph-value {
+    position: absolute;
+    width: 91.9715%;
+    /* 905/984 */
+    height: 241px;
+}
+
+.graph-value div {
+    position: absolute;
+    width: 10%;
+    /* 50/905 */
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size: 0.8889em;
+    /* 16/18 */
+    color: #909090;
+}
+
+.graph-value div:nth-child(1) {
+    bottom: 10px;
+}
+
+.graph-value div:nth-child(2) {
+    left: 10%;
+    bottom: 100px;
+}
+
+.graph-value div:nth-child(3) {
+    left: 20%;
+    bottom: 60px;
+}
+
+.graph-value div:nth-child(4) {
+    left: 30%;
+    bottom: 200px;
+}
+
+.graph-value div:nth-child(5) {
+    left: 40%;
+    bottom: 120px;
+}
+
+.graph-value div:nth-child(6) {
+    left: 50%;
+    bottom: 120px;
+}
+
+.graph-value div:nth-child(7) {
+    left: 60%;
+    bottom: 100px;
+}
+
+.graph-value div:nth-child(8) {
+    left: 70%;
+    bottom: 60px;
+}
+
+.graph-value div:nth-child(9) {
+    left: 80%;
+    bottom: 200px;
+}
+
+.graph-value div:nth-child(10) {
+    left: 90%;
+    bottom: 120px;
+}
+
+@media screen and (max-width: 800px) {
+    .graph-value {
+        width: 88.9715%;
+    }
+}
+
+/* svg 그래프 스타일 */
+.graph-svg-wrap {
+    padding-top: 41px;
+}
+
+.graph svg {
+    width: 100%;
+    /* 905 */
+}
+
+.graph svg>g {
+    width: 100%;
+    /* 905 */
+}
+
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis line {
+    display: none;
+}
+
+.bar {
+    fill: none;
+    width: 3.5248%;
+    /* 50/905 */
+}
+
+.bar:nth-child(2) {
+    fill: #367ec1;
+    /* nature */
+    x: 3.7348%;
+    /* 70/905 */
+}
+
+.bar:nth-child(3) {
+    fill: #8e47b6;
+    /* Family & Friends */
+    x: 13.5138%;
+    /* 249/905 */
+}
+
+.bar:nth-child(4) {
+    fill: #99bd1d;
+    /* Culture */
+    x: 53.5138%;
+    /* 430/905 */
+}
+
+.bar:nth-child(5) {
+    fill: #f7ab28;
+    /* Activity */
+    x: 33.4033%;
+    /* 610/905 */
+}
+
+.bar:nth-child(6) {
+    fill: #ea485b;
+    /* Fun Stories */
+    x: 43.2928%;
+    /* 790/905 */
+}
+
+.bar:nth-child(7) {
+    fill: #367ec1;
+    /* nature */
+    x: 53.7348%;
+    /* 70/905 */
+}
+
+.bar:nth-child(8) {
+    fill: #8e47b6;
+    /* Family & Friends */
+    x: 63.5138%;
+    /* 249/905 */
+}
+
+.bar:nth-child(9) {
+    fill: #99bd1d;
+    /* Culture */
+    x: 73.5138%;
+    /* 430/905 */
+}
+
+.bar:nth-child(10) {
+    fill: #f7ab28;
+    /* Activity */
+    x: 83.4033%;
+    /* 610/905 */
+}
+
+.bar:nth-child(11) {
+    fill: #f7ab28;
+    /* Activity */
+    x: 93.4033%;
+    /* 610/905 */
+}
+
+.x.axis path,
+.x.axis text {
+    display: none;
+}
+
+h1 {
+    margin-bottom: -1%;
+}
+
+/* my history 독서이력 화살표 */
+.month-select {
+    overflow: hidden;
+    width: 230px;
+    margin: 0 auto;
+}
+
+.month-select span,
+.month-select h1 {
+    float: left;
+}
+
+.month-select h1 {
+    margin-top: -3px;
+    padding: 0 20px;
+    font-size: 1.7778em;
+    /* 32/18 */
+    height: 32px;
+    line-height: 32px;
+}
+
+.month-select .icn {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    display: block;
+    background-color: #4356a4;
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn-history-arrow.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+.month-select span.icn-his-arr-r {
+    background-position: center right;
+}
+
+/* content-area */
+.content-area li a h1 {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    font-size: 1em;
+    /* 18px */
+    letter-spacing: -0.025px;
+    font-weight: 400;
+    text-align: center;
+    color: #58595b;
+}
+
+.content-area li a h2.fav {
+    width: 32.25806451612903%;
+    /* 60/186 */
+    margin: 11px auto 0;
+    float: none;
+}
+
+.content-area li a div {
+    width: 30.6122%;
+    /* 60/196 */
+    height: 30px;
+    line-height: 27px;
+    margin: 8px auto 0;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border: 1px solid #248ab2;
+    text-align: center;
+    font-size: 1em;
+    color: #248ab2;
+}
+
+@media screen and (max-width: 768px) {
+    .content-area li a div {
+        width: 40%;
+    }
+}
+
+/* dashboard */
+main.mypage [class*="dashboard-"] {
+    display: flex;
+    grid-column-gap: 30px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+main.mypage [class*="dashboard-"] article {
+    padding: 0;
+}
+
+main.mypage [class*="dashboard-"] h3 {
+    margin-bottom: 15px;
+}
+
+main.mypage [class*="dashboard-"] h3::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #0fadd4;
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 15px;
+    /* Also needed for space (tweak if needed) */
+    text-align: center;
+    margin-right: 7px;
+}
+
+main.mypage .quick_stats {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+main.mypage .quick_stats .Statistics {
+    height: 100%;
+}
+
+main.mypage .quick_stats .Statistics,
+main.mypage .dashboard-2 article .graph-wrap,
+main.mypage .dashboard-3 article {
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+main.mypage .quick_stats .Statistics ul {
+    display: flex;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+main.mypage .quick_stats .Statistics ul li {
+    padding: 0 15px;
+    width: 33.333333%;
+}
+
+main.mypage .quick_stats .Statistics .second_li {
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+
+main.mypage .quick_stats .Statistics ul li h1 {
+    display: flex;
+    align-items: flex-end;
+    height: 38px;
+}
+
+main.mypage .quick_stats .Statistics ul li h1,
+main.mypage .dashboard-3 article h4 {
+    line-height: 1;
+    font-size: 19px;
+    letter-spacing: -1px;
+    font-weight: 300;
+    color: #737373;
+}
+
+main.mypage .quick_stats .Statistics ul.fs_7 li p {
+    font-size: 55px;
+}
+
+main.mypage .quick_stats .Statistics ul li p {
+    margin-top: 19px;
+    color: #000;
+    font-size: 70px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 45px;
+}
+
+main.mypage .quick_stats .Statistics .first_li p {
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/dash_icn_read.png);
+}
+
+main.mypage .quick_stats .Statistics .second_li p {
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/dash_icn_min2.png);
+}
+
+main.mypage .quick_stats .Statistics .third_li p {
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/lms/public_html/resource/images/mypage/dash_icn_act.png);
+}
+
+main.mypage .my_badge div img {
+    width: 180px;
+}
+
+main.mypage section.hitory-graph.dashboard-2 article {
+    width: 100%;
+    padding: 0;
+}
+
+main.mypage .dashboard-2 article h3,
+main.mypage .dashboard-3 h3 {
+    display: flex;
+    align-items: baseline;
+}
+
+main.mypage .dashboard-2 article h3 span,
+main.mypage .dashboard-3 h3 span {
+    margin-left: 15px;
+    line-height: 1;
+    font-size: 16px;
+    letter-spacing: -1px;
+    font-weight: 300;
+    color: #aaa;
+}
+
+main.mypage .dashboard-2 article .graph-wrap {
+    background-color: #fff;
+    padding-bottom: 0;
+}
+
+main.mypage .dashboard-2 article .graph {
+    padding: 0;
+}
+
+main.sub-cmm.mypage section:last-child {
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+main.mypage .dashboard-3 article {
+    padding: 20px;
+}
+
+main.mypage .dashboard-3 article:nth-of-type(2) {
+    margin: 15px 0;
+}
+
+main.mypage .dashboard-3 article h4 {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+main.mypage .dashboard-3 article:nth-of-type(1) h4 {
+    background-color: #ea485b;
+}
+
+main.mypage .dashboard-3 article:nth-of-type(2) h4 {
+    background-color: #ffcc00;
+}
+
+main.mypage .dashboard-3 article:nth-of-type(3) h4 {
+    background-color: #9ccb3b;
+}
+
+main.mypage .dashboard-3 article #chart-Data div,
+main.mypage .dashboard-3 article #chart-Data [width] {
+    width: 100% !important;
+}
+
+/* my interests */
+.interest-bg {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/interest-bg.png) right top no-repeat;
+}
+
+.interest {
+    width: 100%;
+    height: 1048px;
+    clear: left;
+    position: relative;
+    /* top: -27px; */
+}
+
+.interest>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 160px;
+}
+
+.interest .fieldWrap .field {
+    width: 88.8671%;
+    /* 910/1024 */
+    height: 54px;
+    position: relative;
+    margin: 0 auto 31px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/white-bg.png) right center no-repeat;
+}
+
+.interest .fieldWrap .field h4 {
+    position: absolute;
+    top: -14px;
+    left: 0px;
+}
+
+.interest .fieldWrap .field .chapterWrap {
+    width: 52.3077%;
+    /* 476/910 */
+    height: 13px;
+    background: #e6e7e8;
+    border-radius: 10px;
+    position: absolute;
+    top: 22px;
+    right: 4.3956%;
+    /* 40/910 */
+}
+
+.interest .fieldWrap .field .chapterWrap span {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.6667em;
+    /* 12/18 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.red {
+    border: 3px solid #eb485b;
+    color: #eb485b;
+}
+
+.interest .fieldWrap .field .chapterWrap span.yellow {
+    border: 3px solid #f8ab29;
+    color: #f8ab29;
+}
+
+.interest .fieldWrap .field .chapterWrap span.green {
+    border: 3px solid #99bd1d;
+    color: #99bd1d;
+}
+
+.interest .fieldWrap .field .chapterWrap span.purple {
+    border: 3px solid #8f47b7;
+    color: #8f47b7;
+}
+
+.interest .fieldWrap .field .chapterWrap span.blue {
+    border: 3px solid #377dc2;
+    color: #377dc2;
+}
+
+.interest .fieldWrap .field .chapterWrap span.one {
+    left: 0;
+}
+
+.interest .fieldWrap .field .chapterWrap span.two {
+    left: 24.1596%;
+    /* 115/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.three {
+    left: 48.3193%;
+    /* 230/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.four {
+    left: 72.4790%;
+    /* 345/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.five {
+    left: 96.6387%;
+    /* 460/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.on {
+    width: 36px;
+    height: 36px;
+    line-height: 30px;
+    color: #ffffff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-size: 0.8889em;
+    /* 16/18 */
+    top: -14px;
+    text-align: center;
+    box-shadow: 0.5px 0.866px 3px 0px rgba(4, 5, 5, 0.2);
+    -moz-box-shadow: 0.5px 0.866px 3px 0px rgba(4, 5, 5, 0.2);
+    -webkit-box-shadow: 0.5px 0.866px 3px 0px rgba(4, 5, 5, 0.2);
+}
+
+.interest .fieldWrap .field .chapterWrap span.red.on {
+    background: #eb485b;
+    left: -2.1008%;
+    /* 10/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.yellow.on {
+    background: #f8ab29;
+    left: 22.0588%;
+    /* 105/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.green.on {
+    background: #99bd1d;
+    left: 46.2184%;
+    /* 220/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.purple.on {
+    background: #8f47b7;
+    left: 70.3781%;
+    /* 335/476 */
+}
+
+.interest .fieldWrap .field .chapterWrap span.blue.on {
+    background: #377dc2;
+    left: 94.5378%;
+    /* 450/476 */
+}
+
+@media screen and (max-width: 800px) {
+    .interest .fieldWrap .field h4 {
+        top: -9px;
+    }
+
+    .interest .fieldWrap .field h4 img {
+        width: 88%;
+    }
+
+    .interest .fieldWrap .field {
+        width: 88.9322%;
+        /* 683/768 */
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/white-bg-pad.png) right center no-repeat;
+    }
+
+    .interest .fieldWrap .field .chapterWrap {
+        width: 53.2642%;
+        /* 364/683 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.two {
+        left: 24.1758%;
+        /* 88/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.three {
+        left: 48.0769%;
+        /* 175/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.four {
+        left: 72.2527%;
+        /* 263/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.five {
+        left: 94.5054%;
+        /* 344/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.yellow.on {
+        left: 21.4285%;
+        /* 78/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.green.on {
+        left: 45.3296%;
+        /* 165/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.purple.on {
+        left: 69.5055%;
+        /* 253/364 */
+    }
+
+    .interest .fieldWrap .field .chapterWrap span.blue.on {
+        left: 91.7582%;
+        /* 334/364 */
+    }
+}
+
+/* level */
+.level {
+    position: relative;
+}
+
+.mylevel {
+    margin-left: 2.9182%;
+    /* 30/1028 */
+    margin-bottom: 30px;
+    width: 140px;
+    height: 112px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/level-bg.png) no-repeat;
+    float: left;
+}
+
+.mlv-pink {
+    background-position: left bottom;
+}
+
+.mlv-violet {
+    background-position: left -480px;
+}
+
+.mlv-orange {
+    background-position: left -360px;
+}
+
+.mlv-green {
+    background-position: left -240px;
+}
+
+.mlv-blue {
+    background-position: left -120px;
+}
+
+.mlv-yello {
+    background-position: left top;
+}
+
+.mylevel h2 {
+    font-size: 2.2222em;
+    /* 40/18 */
+    color: #fff;
+    text-align: center;
+    line-height: 106px;
+    font-weight: bold;
+}
+
+.level-txt {
+    float: left;
+    width: 48%;
+    margin-left: 3.8910%;
+    /* 40/1028 */
+}
+
+.level-txt p {
+    padding-top: 7px;
+    font-size: 1em;
+    color: #414042;
+}
+
+.level-txt p:first-child {
+    padding-top: 0px;
+}
+
+.level-img {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    .level-txt {
+        width: 44%;
+        font-size: 0.8396em;
+        /*17/18*/
+    }
+}
+
+/* 레벨선택 */
+.propolisWrap {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    padding: 20px 5.078125%;
+    background: #fff;
+    border: 1px solid #d1d3d4;
+}
+
+.plus30 {
+    position: absolute;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    bottom: -30px;
+    right: 5%;
+    color: #6d6e71;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.propolisWrap ul {
+    margin-left: 4.8913%;
+    /* 45/920 */
+    font-size: 0;
+}
+
+.propolisWrap ul.ul-even {
+    margin-left: 0;
+    margin-right: 4.8913%;
+    /* 45/920 */
+}
+
+.propolisWrap ul li {
+    display: inline-block;
+    margin: 0 2.8571% 0 0;
+    /* 25/875 */
+    width: 7.4285%;
+    /* 65/875 */
+    position: relative;
+    cursor: pointer;
+}
+
+.propolisWrap ul li:last-child {
+    margin: 0;
+}
+
+.propolisWrap ul li span.select,
+.propolisWrap ul li span.now {
+    width: 100%;
+    /* 65/875 */
+    height: 69px;
+    display: inline-block;
+    position: absolute;
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.propolisWrap ul li span.select {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/selectLayer.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li span.now {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/nowLayer.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p {
+    width: 100%;
+    /* 65/875 */
+    height: 69px;
+    line-height: 66px;
+    display: table-cell;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5556rem;
+    /* 28/18 */
+    font-weight: 700;
+    display: block;
+}
+
+.propolisWrap ul li p.pink {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/pink.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.pink:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/pink-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.pink:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/pink-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.orange {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/orange.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.orange:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/orange-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.orange:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/orange-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.yellow {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/yellow.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.yellow:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/yellow-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.yellow:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/yellow-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.green {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/green.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.green:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/green-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.green:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/green-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.blue {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/blue.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.blue:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/blue-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.blue:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/blue-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.purple {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/violet.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.purple:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/violet-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.purple:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/violet-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.gray {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/gray.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.gray:hover {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/gray-hv.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.propolisWrap ul li p.gray:active {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/propolis/gray-act.png) center center no-repeat;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .lv-layer div .level {
+        zoom: 100%;
+    }
+
+    .level {
+        zoom: 80%;
+    }
+
+    .level-img {
+        right: 0;
+    }
+
+    .level-txt {
+        width: 52%;
+        font-size: 1em;
+    }
+
+    .propolisWrap {
+        padding: 20px 2%;
+    }
+
+    .propolisWrap ul li {
+        margin: 0 2% 0 0;
+        width: 8.2%;
+    }
+
+    .propolisWrap ul li p,
+    .propolisWrap ul li span.commend,
+    .propolisWrap ul li span.lock,
+    .propolisWrap ul li span.select,
+    .propolisWrap ul li span.now {
+        height: 60px;
+        line-height: 58px;
+        font-size: 1.1111rem;
+        /* 20/18 */
+    }
+
+    .propolisWrap ul li span.select {
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/selectLayer@2x.png) center center no-repeat;
+        background-size: 100%;
+    }
+
+    .propolisWrap ul li span.now {
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/nowLayer@2x.png) center center no-repeat;
+        background-size: 100%;
+    }
+}
+
+/* Highlights Library level standards based on Lexile */
+/* .lexile-graph {
+    padding: 20px 20px;
+    background: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+.lexile-graph h2 {
+    padding-bottom: 18px;
+    color: #58595b;
+    font-size: 1em;
+    text-align: center;
+}
+.lexile {
+    background: #fff;
+    width: 100%;
+    height: 552px;
+    padding: 10px 15px 15px;
+    overflow: hidden;
+}
+.lex-bg {
+    width: 5.2411%; 50/954
+    padding-right: 1.0482%; 10/954
+    padding-bottom: 11px;
+    float: left;
+    text-align: right;
+    border-right: 1px solid #bcbec0;
+}
+.lex-bg h4,
+.lex-bg p,
+.lex-graph div ul li {
+    font-size: 0.7778em; 16/18
+}
+.lex-bg h4 {
+    padding-bottom: 12px;
+}
+.lex-bg p {
+    color: #909090;
+    line-height: 20px;
+}
+.lex-graph {
+    padding-top: 20px;
+    width: 94.3396%; 900/954
+    height: 547px;
+    float: left;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/lexile-bg_old.png) repeat-x;
+    background-position: left 40px;
+    overflow: hidden;
+}
+.lex-graph div {
+    float: left;
+}
+.begin {
+    width: 6.6667%; 60/900
+}
+div.begin li {
+    margin-top: 420px;
+    padding-top: 40px;
+    width: 50%;
+    height: 60px;
+    background: #f76293;
+}
+.begin li:first-child {
+    opacity: .8;
+    margin-top: 440px;
+    padding-top: 20px;
+}
+.eleme, .prein, .inter, .upper {
+    width: 20%; 180/900
+}
+.eleme li, .prein li, .inter li, .upper li {
+    width: 16.66666666666667%
+}
+div.eleme li {
+    margin-top: 280px;
+    padding-top: 180px;
+    height: 200px;
+    background: #663399;
+}
+div.eleme li:nth-child(1) {
+    margin-top: 400px;
+    padding-top: 60px;
+    height: 80px;
+    opacity: 0.5;
+}
+div.eleme li:nth-child(2) {
+    margin-top: 380px;
+    padding-top: 80px;
+    height: 100px;
+    opacity: 0.6;
+}
+div.eleme li:nth-child(3) {
+    margin-top: 360px;
+    padding-top: 100px;
+    height: 120px;
+    opacity: 0.7;
+}
+div.eleme li:nth-child(4) {
+    margin-top: 340px;
+    padding-top: 120px;
+    height: 140px;
+    opacity: 0.8;
+}
+div.eleme li:nth-child(5) {
+    margin-top: 300px;
+    padding-top: 160px;
+    height: 180px;
+    opacity: 0.9;
+}
+
+div.prein li {
+    margin-top: 220px;
+    padding-top: 240px;
+    height: 260px;
+    background: #ff8516;
+}
+div.prein li:nth-child(1) {
+    margin-top: 280px;
+    padding-top: 180px;
+    height: 200px;
+    opacity: 0.5;
+}
+div.prein li:nth-child(2) {
+    margin-top: 260px;
+    padding-top: 200px;
+    height: 220px;
+    opacity: 0.6;
+}
+div.prein li:nth-child(3) {
+    margin-top: 260px;
+    padding-top: 200px;
+    height: 220px;
+    opacity: 0.7;
+}
+div.prein li:nth-child(4) {
+    margin-top: 240px;
+    padding-top: 220px;
+    height: 240px;
+    opacity: 0.8;
+}
+div.prein li:nth-child(5) {
+    margin-top: 240px;
+    padding-top: 220px;
+    height: 240px;
+    opacity: 0.9;
+}
+
+div.inter li {
+    margin-top: 140px;
+    padding-top: 320px;
+    height: 340px;
+    background: #3fc380;
+}
+div.inter li:nth-child(1) {
+    margin-top: 200px;
+    padding-top: 260px;
+    height: 280px;
+    opacity: 0.5;
+}
+div.inter li:nth-child(2) {
+    margin-top: 180px;
+    padding-top: 280px;
+    height: 300px;
+    opacity: 0.6;
+}
+div.inter li:nth-child(3) {
+    margin-top: 180px;
+    padding-top: 280px;
+    height: 300px;
+    opacity: 0.7;
+}
+div.inter li:nth-child(4) {
+    margin-top: 160px;
+    padding-top: 300px;
+    height: 320px;
+    opacity: 0.8;
+}
+div.inter li:nth-child(5) {
+    margin-top: 160px;
+    padding-top: 300px;
+    height: 320px;
+    opacity: 0.9;
+}
+
+div.upper li {
+    margin-top: 80px;
+    padding-top: 380px;
+    height: 400px;
+    background: #19b5fe;
+}
+div.upper li:nth-child(1) {
+    margin-top: 140px;
+    padding-top: 320px;
+    height: 340px;
+    opacity: 0.5;
+}
+div.upper li:nth-child(2) {
+    margin-top: 120px;
+    padding-top: 340px;
+    height: 360px;
+    opacity: 0.6;
+}
+div.upper li:nth-child(3) {
+    margin-top: 120px;
+    padding-top: 340px;
+    height: 360px;
+    opacity: 0.7;
+}
+div.upper li:nth-child(4) {
+    margin-top: 100px;
+    padding-top: 360px;
+    height: 380px;
+    opacity: 0.8;
+}
+div.upper li:nth-child(5) {
+    margin-top: 100px;
+    padding-top: 360px;
+    height: 380px;
+    opacity: 0.9;
+}
+
+.advan {
+    width: 13.3333%; 120/900
+}
+.advan li {
+    width: 25%;
+}
+div.advan li {
+    margin-top: 0;
+    padding-top: 460px;
+    height: 480px;
+    background: #f7ca18;
+}
+div.advan li:nth-child(1) {
+    margin-top: 60px;
+    padding-top: 400px;
+    height: 420px;
+    opacity: 0.5;
+}
+div.advan li:nth-child(2) {
+    margin-top: 40px;
+    padding-top: 420px;
+    height: 440px;
+    opacity: 0.6;
+}
+div.advan li:nth-child(3) {
+    margin-top: 20px;
+    padding-top: 440px;
+    height: 460px;
+    opacity: 0.7;
+}
+
+.lex-graph div ul {
+    height: 480px;
+    overflow: hidden;
+}
+.lex-graph li {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    color: #fff;
+}
+.lex-graph div h3 {
+    padding-top: 10px;
+    font-size: 0.7778em; 14/18
+    text-align: center;
+} */
+/* Highlights Library level standards based on RR LEVEl */
+.lexile-graph {
+    padding: 40px 20px;
+    background: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+
+.lexile-graph h2 {
+    padding-bottom: 18px;
+    color: #58595b;
+    font-size: 1em;
+    text-align: center;
+}
+
+.lexile {
+    background: #fff;
+    width: 100%;
+    padding: 10px 15px 15px;
+    overflow: hidden;
+}
+
+.lex-bg {
+    width: 5.2411%;
+    /* 50/954 */
+    padding-right: 1.0482%;
+    /* 10/954 */
+    padding-bottom: 11px;
+    float: left;
+    text-align: right;
+    border-right: 1px solid #bcbec0;
+}
+
+.lex-bg h4,
+.lex-bg p,
+.lex-graph div ul li {
+    font-size: 0.7778em;
+    /* 16/18 */
+}
+
+.lex-bg h4 {
+    padding-bottom: 12px;
+}
+
+.lex-bg p {
+    color: #909090;
+    line-height: 20px;
+}
+
+.lex-graph {
+    padding-top: 20px;
+    width: 94.3396%;
+    /* 900/954 */
+    float: left;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/lexile-bg.png) repeat-x;
+    background-position: left 56px;
+    overflow: hidden;
+}
+
+.lex-graph div {
+    float: left;
+}
+
+.lex-graph div ul {
+    height: 557px;
+    overflow: hidden;
+}
+
+.begin {
+    width: 6.6667%;
+    /* 60/900 */
+}
+
+div.begin li {
+    margin-top: 420px;
+    padding-top: 40px;
+    width: 50%;
+    height: 60px;
+    background: #f76293;
+}
+
+.begin li:first-child {
+    opacity: .8;
+    margin-top: 440px;
+    padding-top: 20px;
+}
+
+.eleme {
+    width: 26.66666666666667%;
+    /* 240/900 */
+}
+
+.eleme li {
+    width: 12.5%
+}
+
+div.eleme li {
+    margin-top: 397px;
+    padding-top: 140px;
+    height: 160px;
+    background: #663399;
+}
+
+div.eleme li:nth-child(1) {
+    margin-top: 537px;
+    padding-top: 0;
+    height: 20px;
+    opacity: 0.3;
+}
+
+div.eleme li:nth-child(2) {
+    margin-top: 517px;
+    padding-top: 20px;
+    height: 40px;
+    opacity: 0.4;
+}
+
+div.eleme li:nth-child(3) {
+    margin-top: 497px;
+    padding-top: 40px;
+    height: 60px;
+    opacity: 0.5;
+}
+
+div.eleme li:nth-child(4) {
+    margin-top: 477px;
+    padding-top: 60px;
+    height: 80px;
+    opacity: 0.6;
+}
+
+div.eleme li:nth-child(5) {
+    margin-top: 457px;
+    padding-top: 80px;
+    height: 100px;
+    opacity: 0.7;
+}
+
+div.eleme li:nth-child(6) {
+    margin-top: 437px;
+    padding-top: 100px;
+    height: 120px;
+    opacity: 0.8;
+}
+
+div.eleme li:nth-child(7) {
+    margin-top: 417px;
+    padding-top: 120px;
+    height: 140px;
+    opacity: 0.9;
+}
+
+.prein {
+    width: 20%;
+    /* 180/900 */
+}
+
+.prein li {
+    width: 16.66666666666667%
+}
+
+div.prein li {
+    margin-top: 337px;
+    padding-top: 200px;
+    height: 220px;
+    background: #ff8516;
+}
+
+div.prein li:nth-child(1) {
+    margin-top: 397px;
+    padding-top: 140px;
+    height: 160px;
+    opacity: 0.5;
+}
+
+div.prein li:nth-child(2) {
+    margin-top: 377px;
+    padding-top: 160px;
+    height: 180px;
+    opacity: 0.6;
+}
+
+div.prein li:nth-child(3) {
+    margin-top: 377px;
+    padding-top: 160px;
+    height: 180px;
+    opacity: 0.7;
+}
+
+div.prein li:nth-child(4) {
+    margin-top: 357px;
+    padding-top: 180px;
+    height: 200px;
+    opacity: 0.8;
+}
+
+div.prein li:nth-child(5) {
+    margin-top: 357px;
+    padding-top: 180px;
+    height: 200px;
+    opacity: 0.9;
+}
+
+.inter {
+    width: 20%;
+    /* 180/900 */
+}
+
+.inter li {
+    width: 16.66666666666667%
+}
+
+div.inter li {
+    margin-top: 217px;
+    padding-top: 320px;
+    height: 340px;
+    background: #3fc380;
+}
+
+div.inter li:nth-child(1) {
+    margin-top: 317px;
+    padding-top: 220px;
+    height: 240px;
+    opacity: 0.5;
+}
+
+div.inter li:nth-child(2) {
+    margin-top: 297px;
+    padding-top: 240px;
+    height: 260px;
+    opacity: 0.6;
+}
+
+div.inter li:nth-child(3) {
+    margin-top: 277px;
+    padding-top: 260px;
+    height: 280px;
+    opacity: 0.7;
+}
+
+div.inter li:nth-child(4) {
+    margin-top: 257px;
+    padding-top: 280px;
+    height: 300px;
+    opacity: 0.8;
+}
+
+div.inter li:nth-child(5) {
+    margin-top: 237px;
+    padding-top: 300px;
+    height: 320px;
+    opacity: 0.9;
+}
+
+.upper {
+    width: 20%;
+    /* 180/900 */
+}
+
+.upper li {
+    width: 16.66666666666667%
+}
+
+div.upper li {
+    margin-top: 117px;
+    padding-top: 420px;
+    height: 440px;
+    background: #19b5fe;
+}
+
+div.upper li:nth-child(1) {
+    margin-top: 197px;
+    padding-top: 340px;
+    height: 360px;
+    opacity: 0.5;
+}
+
+div.upper li:nth-child(2) {
+    margin-top: 197px;
+    padding-top: 340px;
+    height: 360px;
+    opacity: 0.6;
+}
+
+div.upper li:nth-child(3) {
+    margin-top: 177px;
+    padding-top: 360px;
+    height: 380px;
+    opacity: 0.7;
+}
+
+div.upper li:nth-child(4) {
+    margin-top: 157px;
+    padding-top: 380px;
+    height: 400px;
+    opacity: 0.8;
+}
+
+div.upper li:nth-child(5) {
+    margin-top: 137px;
+    padding-top: 400px;
+    height: 420px;
+    opacity: 0.9;
+}
+
+.advan {
+    width: 13.3333%;
+    /* 120/900 */
+}
+
+.advan li {
+    width: 25%;
+}
+
+div.advan li {
+    margin-top: 37px;
+    padding-top: 500px;
+    height: 520px;
+    background: #f7ca18;
+}
+
+div.advan li:nth-child(1) {
+    margin-top: 97px;
+    padding-top: 440px;
+    height: 460px;
+    opacity: 0.5;
+}
+
+div.advan li:nth-child(2) {
+    margin-top: 77px;
+    padding-top: 460px;
+    height: 480px;
+    opacity: 0.6;
+}
+
+div.advan li:nth-child(3) {
+    margin-top: 57px;
+    padding-top: 480px;
+    height: 500px;
+    opacity: 0.7;
+}
+
+.lex-graph li {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    color: #fff;
+}
+
+.lex-graph div h3 {
+    padding-top: 10px;
+    font-size: 0.7778em;
+    /* 14/18 */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .lex-bg h4,
+    .lex-bg p {
+        letter-spacing: -0.1em;
+    }
+
+    .lex-graph div h3 {
+        font-size: 0.6667em;
+        /* 12/18 */
+        letter-spacing: -0.08em;
+    }
+}
+
+/* 레벨 레이어팝업 */
+#book-layer {
+    display: block;
+    /*     background: rgba(0,0,0,0.7); */
+}
+
+#book-layer div.level-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0;
+    padding: 36px;
+    width: 500px;
+    height: auto;
+    border-radius: 40px;
+    border: 0 none;
+}
+
+div.level-layer h1 {
+    width: 100%;
+    color: #262626;
+    font-size: 26px;
+    text-align: center;
+}
+
+div.level-layer h2 {
+    font-size: 1.1111em;
+    /* 20/18 */
+    text-align: center;
+}
+
+#book-layer div.level-layer div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 36px 0;
+}
+
+#book-layer div.level-layer div:last-child{
+    margin-bottom: -25px;
+    padding-top: 15px;
+}
+
+#book-layer div.level-layer button{
+    margin: 0;
+}
+
+.lv-layer-btn.btn-fixed {
+    margin-top: 28px;
+    /* position: fixed; */
+}
+
+.lv-layer-btn.btn-fixed.line2 {
+    margin-top: 55px;
+}
+
+.lv-beta .lv-layer-btn {
+    margin-top: 51px;
+}
+
+.lv-layer-btn button {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lv-layer-btn>button{
+    background-color: #4356A4;
+    height: auto;
+    line-height: 1;
+    padding: 14px 0;
+    border-radius: 100px;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.lv-layer-btn>button:hover{
+    top : 0;
+    transform: translateY(-4px);
+    box-shadow: none;
+}
+
+.lv-layer-btn>button.btn-gray{
+    color: #262626;
+    background-color: #fff;
+    border : 1px solid #cecece;
+}
+
+.lv-layer-btn.two {
+    width: 250px;
+    margin: 74px auto 0;
+}
+
+.lv-layer-btn.two button:first-child {
+    margin-left: 0;
+}
+
+.lv-layer-btn.two button:last-child {
+    margin-left: 10px;
+}
+
+#book-layer div.level-layer.alert {
+    background: #fff;
+}
+
+#book-layer div.level-layer.emailus {
+    background: #fff;
+    width: 1024px;
+    height: 355px;
+}
+
+#book-layer div.level-layer.emailus main {
+    margin-top: 11px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0.5px 0.866px 0px 0px rgba(2, 8, 2, 0.2)
+}
+
+@media screen and (max-width: 1024px) {
+    #book-layer div.level-layer.emailus {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    #book-layer div.level-layer.emailus main {
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #book-layer div.level-layer {
+        width: 500px;
+        min-width: 500px;
+        left: 20%;
+        /* height: 300px; */
+    }
+
+    #book-layer div.level-layer div {
+        padding: 15px 0 15px;
+    }
+
+    .lv-layer-btn {
+        margin-top: 60px;
+    }
+}
+
+.tab-support {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.tab-support div {
+    width: 35.5%;
+    /* 362/1024 */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.tab-support div input {
+    width: 78.67403%;
+    /* 321/362 */
+}
+
+@media screen and (max-width: 1300px) {
+    .tab-support div input {
+        width: 69.06077348066298%;
+        /* 250/362 */
+    }
+}
+
+/* faq */
+.faq-title {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background: #4356a4;
+    overflow: hidden;
+}
+
+.faq-title h2,
+.faq-title h3 {
+    line-height: 40px;
+    font-size: 0.7777em;
+    /* 14/18 */
+    font-weight: 400;
+    color: #fff;
+    float: left;
+    text-align: center;
+}
+
+.faq-title h2 {
+    width: 13.9648%;
+}
+
+.faq-title h3 {
+    width: 86.0351%;
+}
+
+#faq_wrap {
+    width: 100%;
+    border-top: 1px solid #d6d6d6;
+    text-align: left;
+}
+
+.f-cate {
+    display: inline-block;
+    width: 13.9648%;
+    line-height: 60px;
+    font-size: 0.7777em;
+    /* 14/18 */
+    text-align: center;
+}
+
+#faq_wrap .q {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+#faq_wrap .q>div {
+    width: 100%;
+    overflow: hidden;
+}
+
+#faq_wrap .q>div>span {
+    float: left;
+}
+
+.faq-btn {
+    display: inline-block;
+    width: 9.765625%;
+    /* 100/1024 */
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    text-align: center;
+}
+
+#faq_wrap .q .qt {
+    display: inline-block;
+    width: 76.2695%;
+    /* 781/1024 */
+    line-height: 60px;
+    font-size: 0.7777em;
+    /* 14/18 */
+    color: #222;
+    cursor: pointer;
+}
+
+.qt img {
+    padding-top: 18px;
+    padding-right: 9px;
+    vertical-align: top;
+}
+
+.circle-arrow {
+    display: inline-block;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 1px solid #d1d3d4;
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/support-top-arr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a.circle-arrow:hover,
+#faq_wrap .on a.circle-arrow {
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/support-btm-arr.png);
+}
+
+#faq_wrap .a {
+    padding: 40px 38px;
+    border-bottom: 1px solid #d1d3d4;
+    background: #f8f8f8;
+}
+
+.a .inner .qt {
+    line-height: 24px;
+    display: block;
+    font-size: 0.7777em;
+    /* 14/18 */
+}
+
+.a .inner .qt:first-child {
+    padding-bottom: 10px;
+}
+
+.a .inner .qt img {
+    padding-top: 0;
+}
+
+#faq_wrap+.dataTables_paginate {
+    padding-top: 40px;
+}
+
+/* email us */
+.email-section {
+    padding-top: 5px;
+}
+
+.email {
+    margin-top: 20px;
+    padding-bottom: 26px;
+}
+
+.email>form>ul {
+    border: 1px solid #d1d3d4;
+}
+
+.name, .from, .msg {
+    border-bottom: 1px solid #d1d3d4;
+}
+
+.name, .from, .attached {
+    width: 100%;
+    overflow: hidden;
+}
+
+.name li, .from li, .attached li {
+    float: left;
+}
+
+.name li, .from li {
+    height: 40px;
+    line-height: 40px;
+}
+
+.name li:first-child,
+.from li:first-child,
+.attached li:first-child {
+    width: 11.71875%;
+    /* 120/1024 */
+    border-right: 1px solid #d1d3d4;
+    background: #f8f8f8;
+    font-size: 0.7777em;
+    /* 14/18 */
+    text-align: center;
+    color: #414042;
+}
+
+.name li:last-child,
+.from li:last-child,
+.attached li:last-child {
+    width: 88.28125%;
+    /* 904/1024 */
+}
+
+.name li input,
+.from li input {
+    width: 100%;
+    /* 904/1024 */
+    padding-left: 2.2123%;
+    height: 40px;
+    line-height: 40px;
+    color: #414042;
+    font-size: 0.7777em;
+    /* 14/18 */
+}
+
+.msg {
+    padding: 20px;
+}
+
+.msg textarea {
+    border: 0;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7777em;
+    /* 14/18 */
+}
+
+.attached li:first-child {
+    height: 147px;
+    line-height: 140px;
+}
+
+.attached li:last-child {
+    padding: 10px;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.attached li div {
+    margin-bottom: 3px;
+    font-size: 0.7777em;
+    /* 14/18 */
+    overflow: hidden;
+}
+
+.attached li div:last-child {
+    margin-bottom: 0;
+    color: #a5a5a5;
+}
+
+.attached li div strong {
+    color: #ed1c24;
+}
+
+.upload-name, .filebox label {
+    float: left;
+}
+
+.upload-name a {
+    color: #ed1c24;
+}
+
+.filebox label {
+    display: inline-block;
+    width: 15%;
+    /* 140/884 */
+    height: 30px;
+    line-height: 30px;
+    color: #a5a5a5;
+    font-family: "Montserrat", sans-serif;
+    font-size: inherit;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border-top: 1px solid #d1d3d4;
+    border-right: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+}
+
+/* named upload */
+.filebox .upload-name {
+    width: 84%;
+    height: 32px;
+    line-height: 30px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #d1d3d4;
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* imaged preview */
+.filebox .upload-display {
+    margin-bottom: 5px;
+}
+
+.filebox .upload-thumb-wrap {
+    display: inline-block;
+    width: 54px;
+    padding: 2px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.filebox.bs3-primary label {
+    color: #a5a5a5;
+    background-color: #f8f8f8;
+    border-color: #d1d3d4;
+}
+
+.email button {
+    margin-top: 10px;
+    float: right;
+    width: 14.6484%;
+    /* 150/1024 */
+    height: 45px;
+}
+
+.book_loading {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* 오늘의 책 레이어팝업 */
+#today-book-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+div.today-book-wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -325px auto 0;
+    width: 650px;
+    /* 750/1044 */
+    height: 650px;
+    z-index: 20;
+}
+
+div.today-book-wrap a {
+    display: block;
+    position: absolute;
+    top: 43px;
+    right: 30px;
+}
+
+div.today-book-wrap h1 {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 478px;
+}
+
+.tbl-bg {
+    margin: 137px auto 0;
+    padding: 69px;
+    width: 330px;
+    height: 394px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/main/today-book-bg.png) no-repeat;
+}
+
+.tbl-bg>img {
+    cursor: pointer;
+}
+
+div.today-book-wrap h2 {
+    padding-top: 17px;
+    font-size: 1.111111111111111em;
+    /* 20/18 */
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -0.025px;
+    text-shadow: 1px 1.732px 3px rgba(2, 8, 2, 0.3);
+}
+
+div.today-book-wrap button {
+    width: 240px;
+    height: 60px;
+    margin: 26px 205px 0;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-size: 1.333333333333333em;
+    /* 24/18 */
+}
+
+#today-book-layer div.today-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -325px auto 0;
+    width: 650px;
+    height: 650px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/main/today-bg.png) no-repeat;
+    -webkit-animation: foo 14s infinite linear;
+    -o-animation: foo 14s infinite linear;
+    -moz-animation: foo 14s infinite linear;
+    animation: foo 14s infinite linear;
+}
+
+@-webkit-keyframes foo {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes foo {
+    0% {
+        -moz-transform: rotate(0);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes foo {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#today-book-layer div.star {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -325px auto 0;
+    width: 650px;
+    height: 650px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/main/star.png) no-repeat;
+    -webkit-animation: star 2s infinite linear;
+    -o-animation: star 2s infinite linear;
+    -moz-animation: star 2s infinite linear;
+    animation: star 2s infinite linear;
+}
+
+@-webkit-keyframes star {
+    0% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+
+    50% {
+        opacity: 0;
+        filter: alpha('Opacity=0');
+    }
+
+    100% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+}
+
+@-moz-keyframes star {
+    0% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+
+    50% {
+        opacity: 0;
+        filter: alpha('Opacity=0');
+    }
+
+    100% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+}
+
+@keyframes star {
+    0% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+
+    50% {
+        opacity: 0;
+        filter: alpha('Opacity=0');
+    }
+
+    100% {
+        opacity: 1;
+        filter: alpha('Opacity=1');
+    }
+}
+
+/* /오늘의 책 레이어팝업 */
+/* 레벨테스트 레이어팝업 */
+div.leveltest-wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -325px auto 0;
+    width: 650px;
+    /* 750/1044 */
+    height: 650px;
+    z-index: 20;
+}
+
+div.leveltest-wrap a {
+    display: block;
+    position: absolute;
+    top: 43px;
+    right: 30px;
+}
+
+div.leveltest-wrap h1 {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 358px;
+}
+
+div.level-box {
+    margin: 255px auto 0;
+    width: 550px;
+    height: 300px;
+    border: 10px solid #f7cd13;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background: #fffefa;
+}
+
+.level-box p {
+    padding-top: 41px;
+    text-align: center;
+    font-size: 1.111111111111111em;
+    /* 20/18 */
+    color: #000000;
+}
+
+.level-box p span {
+    color: #0aa1dc;
+}
+
+div.leveltest-wrap button {
+    display: block;
+    width: 350px;
+    height: 60px;
+    margin: 30px auto 0;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-size: 1.333333333333333em;
+    /* 24/18 */
+}
+
+#today-book-layer div.leveltest-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -325px auto 0;
+    width: 650px;
+    height: 650px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/main/leveltest-bg.png) no-repeat;
+}
+
+/* /레벨테스트 레이어팝업 */
+/* 레벨업 레이어팝업 */
+div.level-wrap-layer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -211px auto 0;
+    width: 500px;
+    height: 422px;
+    z-index: 20;
+}
+
+div.level-wrap-layer h1 {
+    font-size: 1.222222222222222em;
+    /* 22/18 */
+    text-align: center;
+    background: #248ab2;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.lv-layer {
+    margin: 0 auto;
+    width: 500px;
+    height: 390px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+}
+
+.lv-beta-layer {
+    height: 392px;
+}
+
+.lv-layer>div:first-child {
+    padding: 40px 0 0 0;
+    width: 500px;
+    height: 200px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/main/level-bg.png) no-repeat;
+}
+
+div.lv-layer>h2 {
+    padding-top: 28px;
+    font-size: 1.111111111111111em;
+    /* 20/18 */
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -0.50px;
+    color: #414042;
+}
+
+div.lv-layer>h3 {
+    padding: 15px 0 10px;
+    font-size: 0.7778em;
+    /*14/18*/
+    font-weight: 300;
+    text-align: center;
+}
+
+.lv-layer>div div.mylevel {
+    margin: 0 auto 0;
+    float: none;
+}
+
+div.lv-layer button {
+    margin-top: 28px;
+    margin-left: 10px;
+    width: 120px;
+    height: 35px;
+    font-size: 0.8889em;
+    /* 24/18 */
+    float: left;
+}
+
+div.lv-layer button.btn-gray {
+    margin-left: 60px;
+}
+
+div.two-button button.btn-gray {
+    margin-left: 125px;
+}
+
+/* /레벨업 레이어팝업 */
+/* 레벨테스트 2017-03-09 추가 */
+.lv-p div {
+    padding: 30px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: #eff9fe;
+    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/level-test-img.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    /* 50/982 */
+}
+
+.lv-p div p {
+    width: 85%;
+}
+
+main.mypage section.lv-result article {
+    padding: 14px 2.03252032520325% 60px;
+}
+
+.lv-result h2 {
+    font-size: 1em;
+    color: #414042;
+    letter-spacing: -0.025em;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .lv-p div p {
+        width: 80%;
+    }
+}
+
+/* my history 2017-03-09 추가 */
+.myPageWrap {
+    width: 100%;
+    height: 316px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/history-bg.png) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+}
+
+.myPageWrap .portraitWrap {
+    width: 17.27494908350305%;
+    /* 150/982 */
+    padding: 0;
+    float: left;
+    margin-left: 4.29531568228106%;
+    /* 52/982 */
+    margin-right: 10.30346232179226%;
+    /* 111/982 */
+}
+
+.myPageWrap .portraitWrap p {
+    text-align: center;
+}
+
+.myPageWrap .portraitWrap p.portrait {
+    position: relative;
+}
+
+.myPageWrap .portraitWrap p.img img {
+    width: 100%;
+    max-width: 135px;
+    margin-bottom: 10px;
+    border-radius: 70px;
+}
+
+.myPageWrap .portraitWrap p.portrait span.level {
+    display: block;
+    width: 42px;
+    height: 44px;
+    line-height: 46px;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/levelBg_bbig.png) no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.111111111111111em;
+    color: #ffffff;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver1 {
+    background-position: left top;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver2 {
+    background-position: left -44px;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver3 {
+    background-position: left -88px;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver4 {
+    background-position: left -132px;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver5 {
+    background-position: left -176px;
+}
+
+.myPageWrap .portraitWrap p.portrait span.ver6 {
+    background-position: left -220px;
+}
+
+.myPageWrap .portraitWrap .txt {
+    font-size: 1.111111111111111em;
+    font-weight: 400;
+    line-height: 1em;
+    color: #248ab2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+
+.myPageWrap .portraitWrap .txt a {
+    /* 2017-05-18 */
+    font-size: 0.6em;
+    display: block;
+    color: #939598;
+    text-decoration: underline;
+}
+
+.myPageWrap .portraitWrap button {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.myPageWrap .portraitWrap button img {
+    width: 24px;
+    margin-right: 8px;
+    margin-top: -3px;
+}
+
+.myPageWrap .portraitStateWrap {
+    width: 65.17311608961303%;
+    /* 640/982 */
+    float: left;
+}
+
+.portraitStateWrap table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.portraitStateWrap table th {
+    text-align: left;
+    padding: 0 0 0 15px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/dotted.png) no-repeat;
+    background-position: 8px center;
+    font-size: 0.8888888888888889em;
+}
+
+.portraitStateWrap table td {
+    text-align: right;
+    padding: 0;
+    font-size: 1.555555555555556em;
+    color: #414042;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+}
+
+.portraitStateWrap table tr.al_right td {
+    text-align: right;
+    line-height: 0.5em;
+    *line-height: 0.7em;
+    height: 50px;
+    vertical-align: bottom;
+    padding: 0 20px 12px 0;
+}
+
+.portraitStateWrap table td.mileage {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/myPage/mileageBg.png) no-repeat;
+    background-position: 10px 10px;
+    color: #ff6a5f
+}
+
+.portraitStateWrap table td.mileage span {
+    color: #ffaba5;
+}
+
+.portraitStateWrap table td.month {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/myPage/monthBg.png) no-repeat;
+    background-position: 10px 1px;
+    color: #109626
+}
+
+.portraitStateWrap table td.month span {
+    color: #76c883;
+}
+
+.portraitStateWrap table td.total {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/myPage/totalBg.png) no-repeat;
+    background-position: 10px 10px;
+    color: #4e80d8
+}
+
+.portraitStateWrap table td.total span {
+    color: #94b1e4;
+}
+
+/* parent report */
+.portraitStateWrap.parent_report h3 {
+    color: #248ab2;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.portraitStateWrap.parent_report table {
+    margin-bottom: 0;
+}
+
+.portraitStateWrap.parent_report th,
+.portraitStateWrap.parent_report td {
+    font-size: 20px;
+    height: auto;
+    background-image: none;
+    padding: 0;
+}
+
+.portraitStateWrap.parent_report th{
+    padding-bottom: 4px;
+}
+
+.portraitStateWrap.parent_report td {
+    padding: 8px;
+    display: flex;
+    gap: 12px;;
+}
+
+.portraitStateWrap.parent_report td button {
+    width: 50%;
+    height: auto;
+    padding: 12px;
+    line-height: 1;
+    border-radius: 100px;
+    background: #fff;
+    border: 1px solid #d1d3d4;
+    color: #909090;
+    font-size: 16px;
+}
+
+.portraitStateWrap.parent_report button img {
+    width: 16px;
+    margin-right: 5px;
+    display: none;
+}
+
+/* .portraitStateWrap.parent_report p + button {float: right; width: 15.625%; padding: 1.3% 0;} */
+.portraitStateWrap.parent_report table~button {
+    float: right;
+    width: 25%;
+    padding: .5% 0;
+    margin-left: 12px;
+    line-height: 1.8;
+}
+
+.portraitStateWrap.parent_report tr:nth-child(2) td{
+    margin-bottom: 24px;
+}
+
+.portraitStateWrap.parent_report td button.weekly.act {
+    background: #11b050;
+    border-color: #11b050;
+    color: #fff;
+}
+
+.portraitStateWrap.parent_report td button.monthly.act {
+    background: #4e80d8;
+    border-color: #4e80d8;
+    color: #fff;
+}
+
+.portraitStateWrap.parent_report td button.act img {
+    display: inline-block;
+}
+
+.portraitStateWrap.parent_report td input{
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.portraitStateWrap.parent_report p {
+    font-size: 14px;
+    float: left;
+    display: inline-block;
+    text-indent: 16px;
+    padding: 2% 0;
+    width: 80.375%;
+}
+
+.portraitStateWrap.parent_report p b {
+    font-weight: bold;
+}
+
+table.level-table tbody td,
+table.level-table2 tbody td {
+    position: relative;
+    height: 40px;
+    padding: 0;
+    /* 40/640 */
+    text-align: left;
+}
+
+table.level-table tbody td div {
+    position: absolute;
+    top: -16px;
+    right: 5.125%;
+}
+
+.his-dash-wrap .d-month {
+    border-left: 0 none;
+}
+
+.his-dash-wrap .d-month,
+.his-dash-wrap .d-week,
+.his-dash-wrap .all-time {
+    width: 33.28125%;
+}
+
+table.level-table input,
+table.level-table2 input,
+table.level-table2 div.photo-upload .upload-name {
+    width: 43.7956204379562%;
+    /* 180/411 */
+    border: 1px solid #d1d3d4;
+    height: 28px;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 2.11416490486258%;
+    /* 5/473 */
+    padding: 0 2.11416490486258%;
+    /* 5/473 */
+}
+
+table.level-table input:focus,
+table.level-table2 input:focus {
+    border: 1px solid #248ab2;
+}
+
+table.level-table input:last-child,
+table.level-table2 input:last-child {
+    margin-right: 0;
+}
+
+table.level-table input[readonly="readonly"],
+table.level-table2 input[readonly="readonly"],
+table.level-table input[readonly],
+table.level-table2 input[readonly] {
+    border: 0;
+}
+
+.portraitStateWrap table td.btn {
+    text-align: center;
+}
+
+.portraitStateWrap table td button {
+    display: inline-block;
+    width: 82.60869565217391%;
+    /* 95/115 */
+    height: 65px;
+    line-height: 65px;
+    color: #ffffff;
+    font-size: 0.8888888888888889rem;
+    vertical-align: top;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+portraitStateWrap table td button:hover {
+    background: #09688d;
+}
+
+.my-info table.level-table tbody td,
+.my-info table.level-table2 tbody td {
+    height: 60px;
+    padding: 0 3.25% 0 15px;
+}
+
+table.level-table2 div.photo-upload {
+    position: relative;
+    display: inline-block;
+    width: 48%;
+}
+
+table.level-table2 div.photo-upload .upload-name {
+    position: relative;
+    width: 73.7956204379562%;
+    /* 180/411 */
+    border: 1px solid #d1d3d4;
+    height: 30px;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 0;
+    /* 5/473 */
+    margin-left: -1%;
+    padding: 2% 2.11416490486258%;
+    /* 5/473 */
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table.level-table2 div.photo-upload .upload-name a {
+    position: absolute;
+    right: 1.5%;
+}
+
+table.level-table2 div.photo-upload label {
+    display: inline-block;
+    width: 26%;
+    height: 26px;
+    line-height: 12px;
+    margin-top: -4%;
+    padding-top: 1%;
+    color: #a5a5a5;
+    font-family: "Montserrat", sans-serif;
+    font-size: inherit;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border-top: 1px solid #d1d3d4;
+    border-right: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    font-size: 0.65rem;
+}
+
+@media screen and (max-width: 1044px) {
+    .portraitStateWrap table td {
+        font-size: 1.33334em;
+        /* 24/18 */
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .portraitStateWrap table td, div.d-txt h2 {
+        font-size: 0.9375em;
+        /* 18/18 */
+    }
+
+    .my-info table.level-table tbody td, .my-info table.level-table2 tbody td {
+        height: 45px;
+    }
+
+    .portraitStateWrap table th {
+        font-size: 0.7408em;
+        /*15/18*/
+    }
+
+    .dash-wrap {
+        padding-top: 15px;
+    }
+
+    div.d-txt {
+        padding-top: 10px;
+    }
+
+    .myPageWrap {
+        height: 30.859375vw;
+    }
+
+    .portraitStateWrap.parent_report h3 {
+        padding-bottom: 5px;
+    }
+
+    .portraitStateWrap.parent_report td {
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .myPageWrap .portraitWrap p.img img {
+        max-width: 95px;
+    }
+
+    .my-info table.level-table tbody td,
+    .my-info table.level-table2 tbody td {
+        height: 40px;
+    }
+
+    table.level-table2 div.photo-upload .upload-name {
+        padding: 4% 2.11416490486258%;
+        /* 5/473 */
+    }
+
+    table.level-table2 div.photo-upload label {
+        margin-top: -1%;
+        padding-top: 2%;
+        font-size: 0.45rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myPageWrap {
+        height: 237px;
+    }
+}
+
+.ie8 .hitory-graph {
+    display: none;
+}
+
+/* Datatable Sort */
+.blue th .sortA {
+    width: 7px;
+    margin-left: 7px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+.blue th.sorting, .blue th.sorting_desc, .blue th.sorting_asc {
+    cursor: pointer;
+}
+
+.blue th.sorting .sortA {
+    width: 7px;
+    height: 13px;
+    background-image: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/ico_sort.png');
+    background-repeat: no-repeat;
+}
+
+.blue th.sorting_asc .sortA {
+    width: 7px;
+    height: 7px;
+    background-position: 0 0;
+    background-image: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/ico_sort.png');
+    background-repeat: no-repeat;
+}
+
+.blue th.sorting_desc .sortA {
+    width: 7px;
+    height: 7px;
+    background-position: 0 -7px;
+    background-image: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/library/ico_sort.png');
+    background-repeat: no-repeat;
+}
+
+/* 170628 퍼블리싱- 박보라 support */
+#support-main {
+    background: #fff;
+}
+
+#support-main main>section article {
+    padding: 26px 1.171875% 26px;
+    /* 12/1024 */
+}
+
+/*how to use*/
+.support-movie {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.2%;
+}
+
+.support-movie div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ul.use {
+    padding-top: 20px;
+}
+
+ul.use li {
+    width: 25%;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-left: 1px solid #248ab2;
+}
+
+ul.use li:nth-child(4),
+ul.use li:last-child {
+    border-right: 1px solid #248ab2;
+}
+
+ul.use li:nth-child(-n+4) {
+    border-top: 1px solid #248ab2;
+    border-bottom: 1px solid #248ab2;
+}
+
+ul.use li:nth-child(n+5):nth-child(-n+8) {
+    border-bottom: 1px solid #248ab2;
+}
+
+ul.use li a {
+    display: block;
+    width: 100%;
+    height: 91px;
+    line-height: 91px;
+    text-align: center;
+    color: #248ab2;
+}
+
+ul.use li:hover a,
+ul.use li a.act {
+    background: #248ab2;
+    color: #fff;
+}
+
+ul.use+button {
+    float: right;
+    margin-top: 10px;
+    width: 318px;
+    height: 65px;
+}
+
+ul.use+button img {
+    padding-left: 10px;
+}
+
+/*a guide for parents, teacher*/
+section.support_visaul {
+    width: 100%;
+    height: 400px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/support/parents-visual.png) center top
+}
+
+section.support_visaul.teacher {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/support/teacher-visual.png) center top
+}
+
+section.support_visaul div {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 245px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    section.support_visaul div {
+        width: 100%;
+    }
+}
+
+.level_table table {
+    margin-bottom: 60px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-style: solid;
+}
+
+.level_table table th {
+    height: 70px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    font-size: 1.333333333333333em;
+    /*24/18*/
+}
+
+.level_table table td {
+    padding: 30px 20px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+}
+
+.level_table table tbody tr td:last-child {
+    padding: 0 20px 30px;
+}
+
+.level_table h2 {
+    padding-top: 4px;
+    font-size: 1.333333333333333rem;
+    /*24/18*/
+    word-break: break-word;
+}
+
+.level_table h3 {
+    font-size: 1.333333333333333rem;
+    /*24/18*/
+    text-align: left;
+    padding-top: 28px;
+    letter-spacing: -.05em;
+}
+
+.level_table p {
+    padding-left: 20px;
+    font-size: 1.111111111111111rem;
+    /*20/18*/
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    word-break: break-word;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/support/bullet.png) 7px 13px no-repeat;
+}
+
+p.no_blt {
+    padding-left: 0;
+    background: none;
+    padding-top: 30px;
+}
+
+.level_table table tbody tr td.lv_tb_btn {
+    padding: 10px 0 15px;
+}
+
+td.lv_tb_btn button {
+    margin-right: 8px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 30px;
+    width: auto;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    text-align: left;
+}
+
+td.lv_tb_btn button:last-child {
+    margin-right: 0;
+}
+
+td.lv_tb_btn button img {
+    vertical-align: -8px;
+    padding-right: 10px;
+}
+
+.level1_2 {
+    margin-top: 34px;
+    border-color: #c7eafb;
+}
+
+.level1_2 th {
+    background: #c7eafb;
+}
+
+.level1_2 th,
+.level1_2 td {
+    border-color: #c7eafb;
+}
+
+.level1_2 h3 {
+    color: #248ab2;
+}
+
+.level3_8 {
+    border-color: #fecfcf;
+}
+
+.level3_8 th {
+    background: #fecfcf;
+}
+
+.level3_8 th,
+.level3_8 td {
+    border-color: #fecfcf;
+}
+
+.level3_8 h3 {
+    color: #ff5858;
+}
+
+.level9_14 {
+    border-color: #e6daff;
+}
+
+.level9_14 th {
+    background: #e6daff;
+}
+
+.level9_14 th,
+.level9_14 td {
+    border-color: #e6daff;
+}
+
+.level9_14 h3 {
+    color: #7649d4;
+}
+
+.level9_14 {
+    border-color: #e6daff;
+}
+
+.level9_14 th {
+    background: #e6daff;
+}
+
+.level9_14 th,
+.level9_14 td {
+    border-color: #e6daff;
+}
+
+.level9_14 h3 {
+    color: #7649d4;
+}
+
+.teachers {
+    margin-top: 34px;
+    border-color: #ccfbc7;
+}
+
+.teachers th {
+    background: #ccfbc7;
+    border-right: 1px solid #fff !important;
+}
+
+.teachers th:last-child {
+    border-right: 0 !important;
+}
+
+.teachers th,
+.teachers td {
+    border-color: #ccfbc7;
+}
+
+.teachers h3 {
+    color: #059821;
+}
+
+.btn_lv_blue {
+    background: #c7eafb;
+    box-shadow: 0 5px #7dcaef;
+    color: #248ab2;
+}
+
+.btn_lv_blue:hover {
+    box-shadow: 0 4px #7dcaef;
+    top: 1px;
+}
+
+.btn_lv_blue:active {
+    box-shadow: 0 0 #7dcaef;
+    top: 5px;
+}
+
+.btn_lv_pink {
+    background: #fecfcf;
+    box-shadow: 0 5px #fca3a3;
+    color: #ff5858;
+}
+
+.btn_lv_pink:hover {
+    box-shadow: 0 4px #fca3a3;
+    top: 1px;
+}
+
+.btn_lv_pink:active {
+    box-shadow: 0 0 #fca3a3;
+    top: 5px;
+}
+
+.btn_lv_purple {
+    background: #e6daff;
+    box-shadow: 0 5px #bfa6f4;
+    color: #7649d4;
+}
+
+.btn_lv_purple:hover {
+    box-shadow: 0 4px #bfa6f4;
+    top: 1px;
+}
+
+.btn_lv_purple:active {
+    box-shadow: 0 0 #bfa6f4;
+    top: 5px;
+}
+
+.btn_lv_green {
+    background: #ccfbc7;
+    box-shadow: 0 5px #84de7a;
+    color: #059821;
+}
+
+.btn_lv_green:hover {
+    box-shadow: 0 4px #84de7a;
+    top: 1px;
+}
+
+.btn_lv_green:active {
+    box-shadow: 0 0 #84de7a;
+    top: 5px;
+}
+
+/*aboutUs-eLibrary-levelSystem*/
+main.whitebg {
+    background: #ffffff;
+}
+
+.container {
+    position: relative;
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#levelSystem {
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+#levelSystem .sub-main {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/eLibrary_bg.png) repeat;
+}
+
+#levelSystem .container .sub-main-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+#levelSystem .sub-main .text-wrap {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 5;
+}
+
+#levelSystem .sub-main .text-wrap .text-title {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 1.9445em;
+    color: #fff;
+}
+
+#levelSystem .sub-main .text-wrap .text-title span {
+    color: #fff9ae;
+}
+
+#levelSystem .sub-main .text-wrap .text {
+    color: #fff;
+}
+
+#levelSystem .sub-main .text-wrap .text span {
+    color: #008480;
+}
+
+#levelSystem .sub-main .sub-img {
+    position: absolute;
+    top: 0;
+    right: -230px;
+}
+
+#levelSystem .sub-content {
+    position: relative;
+}
+
+#levelSystem .sub-content .road {
+    position: relative;
+    width: 100%;
+    height: 2208px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/road.png) center top no-repeat;
+}
+
+#levelSystem .sub-content .road .step-warp {
+    padding: 70px 0;
+}
+
+#levelSystem .sub-content .road .step {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+#levelSystem .sub-content .road .step .step-img {
+    float: left;
+    width: 11.718%;
+    margin-right: 2.930%
+}
+
+#levelSystem .sub-content .road .step .step-mac {
+    position: relative;
+    float: left;
+    width: 64.984%
+}
+
+#levelSystem .sub-content .road .step .step-mac .step-mac-wrap {
+    position: absolute;
+    width: 73.835%;
+    top: 7.145%;
+    left: 12.924%;
+    /*    padding: 4.245% 14.577% 0 12.924%;*/
+    overflow: hidden;
+}
+
+#levelSystem .sub-content .road .step .step-mac .step-mac-slide {
+    width: 100%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 {
+    float: left;
+    width: 100%;
+    margin: 7% 1.302% 0 1.302%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 ul li {
+    float: left;
+    margin-right: 20.2%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 .dog {
+    width: 17.344%;
+    margin-top: 5.077%;
+    margin-left: 5.859%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 .goal {
+    width: 12.835%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 .dog-home {
+    width: 22.989%;
+}
+
+#levelSystem .sub-content .road .step .wrap-step2 ul li:last-child {
+    margin: 10px 0 0 0;
+}
+
+#levelSystem .sub-content .road .step .step-level-up {
+    float: right;
+    width: 18.457%;
+    margin-top: 11.77%;
+    margin-right: 16.113%;
+}
+
+#levelSystem .sub-content .road .step .step-level-up-test {
+    width: 43.945%;
+    float: left;
+}
+
+#levelSystem .sub-content .road .step .step-level-up-test-text {
+    width: 65%;
+    margin-left: 29.297%;
+    padding-top: 17.6%;
+}
+
+#levelSystem .sub-content .road .step p {
+    padding-top: 6.272%;
+    margin-left: -65px;
+    text-align: center;
+    font-weight: 300;
+    color: #808285;
+}
+
+#levelSystem .sub-content .road .step p span {
+    font-weight: 600;
+    color: #fd6d40;
+}
+
+#levelSystem .sub-content .bottom-bg {
+    position: absolute;
+    bottom: -58px;
+    width: 100%;
+    height: 15.851%;
+    background-color: #7ccc5d;
+    z-index: -5;
+}
+
+@media screen and (max-width: 1044px) {
+    #levelSystem .container {
+        width: 100%;
+    }
+
+    #levelSystem .sub-main .text-wrap {
+        left: 5%;
+    }
+
+    #levelSystem .sub-main .sub-img {
+        right: -20%;
+    }
+
+    #levelSystem .sub-content .road {
+        height: 100%;
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/road2.png) center top no-repeat;
+        background-size: 170%;
+    }
+
+    #levelSystem .sub-content .road .step .step-img {
+        margin-left: 5.747%;
+    }
+
+    #levelSystem .sub-content .road .step .wrap-step2 ul li {
+        margin-right: 17.720%;
+    }
+
+    #levelSystem .sub-content .road .step .wrap-step2 .dog {
+        margin-left: 9.579%;
+    }
+
+    #levelSystem .sub-content .road .step .step-level-up-test {
+        margin-left: 5.747%;
+    }
+
+    #levelSystem .sub-content .bottom-bg {
+        position: relative;
+        bottom: 0;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #levelSystem .sub-content .road .step .wrap-step2 {
+        margin: 4.5% 1.302% 0 1.302%;
+    }
+
+    #levelSystem .sub-content .road .step .step-level-up {
+        margin-top: 10.77%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #levelSystem .container {
+        width: 100%;
+    }
+
+    #levelSystem .sub-main .sub-img {
+        right: -39%;
+    }
+
+    #levelSystem .sub-main .sub-img img {
+        width: 80%;
+    }
+
+    #levelSystem .sub-content .road .step-warp {
+        padding: 40px 0;
+    }
+}
+
+/*aboutUs-eLibrary-levelSystem end*/
+/*our-contents*/
+#ourContents .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+#ourContents .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 500px;
+    /*    Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#ourContents .swiper-wrapper .swiper-slide:nth-child(1) {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/slideInto-bg.png) no-repeat center bottom;
+    background-size: cover;
+}
+
+#ourContents .swiper-wrapper .swiper-slide:nth-child(2) {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/slideHighfive-bg.png) no-repeat center top;
+    background-size: cover;
+}
+
+#ourContents .swiper-wrapper .swiper-slide:nth-child(3) {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/slideZanerBloser-bg.png) no-repeat center top;
+    background-size: cover;
+}
+
+#ourContents .swiper-wrapper .swiper-slide:nth-child(4) {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/slideHighlights-bg.png) no-repeat center top;
+    background-size: cover;
+}
+
+#ourContents .swiper-wrapper .swiper-slide .slide-content {
+    width: 90%;
+}
+
+.swiper-pagination-bullet {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #3995ba !important;
+}
+
+#ourContents {
+    padding-bottom: 40px;
+}
+
+#ourContents .wrap-content {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff75c;
+}
+
+#ourContents .first {
+    background-color: #fff75c;
+}
+
+#ourContents .second {
+    background-color: #ffc3d3;
+}
+
+#ourContents .third {
+    background-color: #8ad2ff;
+}
+
+#ourContents .container {
+    padding-top: 135px;
+}
+
+#ourContents .section .child-l {
+    position: relative;
+    display: inline-block;
+    width: 22.754%;
+    z-index: 10;
+}
+
+#ourContents .section .child-r {
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 30.566%;
+    right: -10.548%;
+    z-index: 9;
+}
+
+#ourContents .section .lable-y {
+    position: relative;
+    display: inline-block;
+    bottom: 0;
+    left: 10px;
+    z-index: 0
+}
+
+#ourContents .first .speach-img, #ourContents .third .speach-img {
+    position: absolute;
+    top: 24.529%;
+    left: 22.754%;
+}
+
+#ourContents .first .speach-img {
+    width: 56.348%;
+}
+
+#ourContents .second .speach-img {
+    position: absolute;
+    width: 69.043%;
+    top: 24.529%;
+    right: 16.695%;
+}
+
+#ourContents .third .speach-img {
+    width: 69.043%;
+}
+
+#ourContents .first .speach-text {
+    position: absolute;
+    top: 31.513%;
+    left: 34.180%;
+}
+
+#ourContents .second .speach-text {
+    position: absolute;
+    top: 29.218%;
+    right: 26.761%;
+}
+
+#ourContents .third .speach-text {
+    position: absolute;
+    top: 29.084%;
+    left: 32.227%;
+}
+
+#ourContents .first .wrap-label {
+    position: absolute;
+    width: 100%;
+    height: 42.017%;
+    bottom: 0;
+    left: 12.604%;
+}
+
+#ourContents .third .wrap-label {
+    position: absolute;
+    width: 100%;
+    height: 39.841%;
+    bottom: 0;
+    left: 12.604%;
+}
+
+#ourContents .second .wrap-label {
+    position: absolute;
+    width: 100%;
+    height: 41.027%;
+    bottom: 0;
+    right: 12.604%;
+}
+
+#ourContents .first .triangle, #ourContents .third .triangle {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/yellow.png) no-repeat;
+    left: -200px;
+}
+
+#ourContents .second .triangle {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    right: -200px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/pink.png) no-repeat;
+}
+
+#ourContents .third .triangle {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/blue.png) no-repeat;
+    left: -200px;
+}
+
+#ourContents .first .label-y-bg {
+    position: relative;
+    bottom: 0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffde00;
+}
+
+#ourContents .second .label-y-bg {
+    position: relative;
+    bottom: 0;
+    right: 200px;
+    width: 100%;
+    height: 100%;
+    background-color: #ff9bb6;
+}
+
+#ourContents .third .label-y-bg {
+    position: relative;
+    bottom: 0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    background-color: #55b1ff;
+}
+
+#ourContents .label-text {
+    position: absolute;
+    bottom: 12.605%;
+    left: 29.387%;
+    z-index: 10;
+}
+
+#ourContents .second .label-text {
+    left: 28.387%
+}
+
+#ourContents .label-text span {
+    font-size: 1.4445em;
+    font-weight: 400;
+}
+
+#ourContents .first .label-book, #ourContents .third .label-book {
+    position: absolute;
+    width: 37.973%;
+    bottom: 0.521%;
+    right: -19.979%;
+    z-index: 8;
+}
+
+#ourContents .second .label-book {
+    position: absolute;
+    width: 37.973%;
+    bottom: 0.521%;
+    left: -18.979%;
+    z-index: 8;
+}
+
+@media screen and (max-width: 1044px) {
+    #ourContents .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #ourContents .section .child-r {
+        right: -7.548%;
+    }
+
+    #ourContents .second .speach-img {
+        right: 19.695%;
+    }
+
+    #ourContents .second .speach-text {
+        right: 27.820%
+    }
+
+    #ourContents .speach-text, label-text {
+        font-size: 0.75em;
+    }
+
+    #ourContents .label-text {
+        position: absolute;
+        bottom: 9.605%;
+        left: 39.387%;
+    }
+
+    #ourContents .second .label-text {
+        left: 6.387%;
+    }
+
+    #ourContents .label-text span {
+        font-size: 1.2223em;
+    }
+
+    #ourContents .label-book {
+        display: none;
+    }
+
+    #ourContents .first .speach-text {
+        left: 30.18%;
+    }
+
+    #ourContents .third .speach-text {
+        left: 29.227%
+    }
+
+    #levelSystem .sub-content .road .step p {
+        margin-lefr: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #ourContents .swiper-slide {
+        height: 260px;
+        background-size: 130% !important;
+    }
+
+    #ourContents .swiper-wrapper .swiper-slide .slide-content {
+        width: 70%;
+    }
+
+    #ourContents .first .wrap-label,
+    #ourContents .third .wrap-label {
+        left: 2.604%
+    }
+
+    #ourContents .label-text {
+        position: absolute;
+        bottom: 9.605%;
+        left: 38.387%;
+        font-size: 0.825em;
+    }
+
+    #ourContents .speach-text {
+        width: 100%;
+    }
+
+    #ourContents .second .speach-text {
+        left: 19.461%;
+    }
+}
+
+/*aboutUs-eLibrary-mobileApps*/
+#mobileApps, #booksForYou {
+    padding-bottom: 40px;
+}
+
+#mobileApps .sub-main {
+    position: relative;
+    padding-top: 40px;
+    width: 100%;
+    height: 600px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/mobileApps_bg.png) repeat;
+}
+
+#mobileApps .sub-main>.container {
+    height: 560px;
+    overflow: hidden;
+    position: relative;
+}
+
+#mobileApps .sub-main .appPreview {
+    width: 45.410%;
+    display: inline-block;
+    position: relative;
+}
+
+#mobileApps .sub-main .wrap {
+    position: absolute;
+    padding-top: 19.55%;
+    top: 0;
+    left: 9.463%;
+    width: 81.724%;
+}
+
+.bx-wrapper {
+    position: relative;
+    border: 0px;
+}
+
+.wrap .wrap-slide .swiper-wrapper {
+    position: relative;
+    top: 14.643%;
+}
+
+#mobileApps .appPromoDesc {
+    position: absolute;
+    top: 32%;
+    left: 48%;
+    width: 50%;
+    margin-top: -80px;
+    text-align: center;
+    font-weight: 300;
+}
+
+#mobileApps .appPromoDesc ul li h2 {
+    width: 87.737%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#mobileApps .appPromoDesc ul li p {
+    font-size: 1.333333333333333em;
+    font-weight: 300;
+    letter-spacing: -.05em;
+}
+
+#mobileApps .appPromoDesc ul li p span {
+    font-weight: 600;
+}
+
+.container:after, .container:before {
+    display: table;
+    content: " ";
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.appPromoDesc li {
+    display: none;
+}
+
+li.app_desc_1,
+li.app_desc_2 {
+    padding-top: 30px;
+}
+
+li.app_desc_0 p span {
+    color: #ee4848;
+}
+
+li.app_desc_1 p span {
+    color: #ffad0f;
+}
+
+li.app_desc_2 p span {
+    color: #18a779;
+}
+
+.bx-controls {
+    position: absolute;
+    top: 330px;
+    right: -96.58%;
+}
+
+.bx-pager-item {
+    float: left;
+}
+
+.bx-wrapper .bx-pager-item a {
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    background: #000;
+    opacity: .2;
+    text-indent: -100000px;
+    margin: 0 5px;
+}
+
+a.active.bx-pager-link {
+    background: #3995ba;
+    opacity: 1;
+}
+
+a.active.bx-pager-link {
+    background: #3995ba;
+    opacity: 1;
+}
+
+.diagonal {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    z-index: 10;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/diagonal.png) center bottom no-repeat;
+    background-size: 100% 90%;
+}
+
+.diagonal.diagonal200 {
+    height: 200px !important;
+    bottom: -100px !important;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/diagonal_200.png) center bottom no-repeat;
+    background-size: 100% 90% !important;
+}
+
+.section .section-title {
+    padding: 80px 0 30px;
+    font-size: 3em;
+    color: #248ab2;
+    text-align: center;
+}
+
+.section .section-content {
+    padding-top: 30px;
+    color: #808285;
+    font-size: 1.3334em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.section .line {
+    width: 580px;
+    margin: 0 auto;
+    border-bottom: 2px solid #d1d3d4;
+}
+
+#mobileApps .section .apps-icon {
+    margin-top: 50px;
+    text-align: center;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/mobileApps-diagonal.png) center bottom no-repeat;
+}
+
+#mobileApps .section .wrap-apps .apps-QR {
+    width: 100%;
+    background: #248ab2;
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-title {
+    padding: 45px 0 55px 0;
+    font-size: 4.4445em;
+    font-weight: 900;
+    color: #2082ab;
+    text-align: center;
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-code {
+    width: 79.297%;
+    margin: 0 auto;
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-code .app-store {
+    position: relative;
+    float: left;
+    width: 36.946%;
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-code .app-store .app-store-qr {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 49% 23.333% 70px 23.333%
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-code .google-play {
+    position: relative;
+    float: right;
+    width: 36.946%;
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-code .google-play .google-play-qr {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 49% 23.333% 70px 23.333%
+}
+
+#mobileApps .section .wrap-apps .apps-QR .apps-QR-hands {
+    width: 80.566%;
+    padding-top: 9.524%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1920px) {
+    .diagonal {
+        background-size: 100% 90%;
+    }
+
+    #mobileApps .section .wrap-apps .apps-icon {
+        background-size: 100% 81%;
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    #mobileApps .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    .bx-controls {
+        top: 400px;
+        right: -96.586%;
+        z-index: 1000;
+    }
+
+    #mobileApps .section .wrap-apps .apps-QR .apps-QR-title {
+        font-size: 4em;
+    }
+}
+
+/*aboutUs-eLibrary-booksForYou*/
+#booksForYou .sub-main {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-bg.png) repeat;
+}
+
+#booksForYou div.today-book-wrap, #booksForYou div.star, #booksForYou div.today-bg {
+    top: 0;
+    margin: 0;
+}
+
+#booksForYou div.today-book-wrap {
+    width: 61.523%;
+    height: 90%;
+}
+
+#booksForYou div.today-book-wrap button {
+    margin-left: 31.096%;
+}
+
+#booksForYou .sub-main .sub-main-title {
+    position: absolute;
+    top: 230px;
+    right: 0;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    z-index: 40;
+}
+
+#booksForYou .sub-main .sub-main-title span {
+    color: #fff45f;
+}
+
+#booksForYou .section .recommended .section-content {
+    padding-top: 80px;
+    font-size: 1.5556em;
+}
+
+#booksForYou .section .wrap-recommended .recommended-multi {
+    text-align: center;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-diagonal.png) center bottom no-repeat;
+}
+
+#booksForYou .section .wrap-recommended .recommended {
+    background: #f3f3f3;
+}
+
+#booksForYou .section .wrap-recommended .recommended p span {
+    color: #fd6d40;
+    font-weight: 600;
+}
+
+#booksForYou .section .wrap-recommended .recommended .booksForYou-my {
+    padding: 20px 0 31.7%;
+    text-align: center;
+}
+
+@media screen and (min-width: 1920px) {
+    #booksForYou .section .wrap-recommended .recommended-multi {
+        background-size: 100% 20%;
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    #booksForYou .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #booksForYou div.today-bg {
+        left: -5.437%;
+    }
+
+    #booksForYou .sub-main .sub-main-title {
+        font-size: 1.6993em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #booksForYou div.today-bg {
+        left: -85px;
+    }
+
+    #booksForYou div.today-book-wrap button {
+        margin-left: 21.696%;
+    }
+
+    #booksForYou .sub-main .sub-main-title {
+        font-size: 1.3417em;
+    }
+}
+
+/*aboutUs-eLibrary-readAndCheckUp*/
+#readAndCheckUp {
+    padding-bottom: 40px;
+}
+
+#readAndCheckUp .read {
+    width: 1310px;
+    margin: 0 auto;
+    position: relative;
+    padding: 70px 0 90px;
+}
+
+#readAndCheckUp .read button {
+    position: absolute;
+    width: 18.321%;
+    height: 5.660%;
+    top: 21.698%;
+    left: 12.977%;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-size: 1.6667em;
+    /* 24/18 */
+    font-weight: 600;
+}
+
+#readAndCheckUp .checkUp button {
+    position: absolute;
+    width: 18.321%;
+    height: 7.660%;
+    top: 5.590%;
+    left: 12.977%;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-size: 1.6667em;
+    /* 24/18 */
+    font-weight: 600;
+}
+
+#readAndCheckUp .section button img {
+    width: 18.75%;
+}
+
+.btn-red {
+    color: #fff;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 4px;
+    background: #eb4335;
+    box-shadow: 0 5px #bd2114;
+}
+
+#readAndCheckUp .read .btn-red:hover {
+    color: #fff;
+    box-shadow: 0 4px #bd2114;
+    top: 21.792%;
+}
+
+#readAndCheckUp .read .btn-red:active {
+    color: #fff;
+    box-shadow: 0 0 #bd2114;
+    top: 22.170%;
+}
+
+#readAndCheckUp .checkUp .btn-red:hover {
+    color: #fff;
+    box-shadow: 0 4px #bd2114;
+    top: 5.714%;
+}
+
+#readAndCheckUp .checkUp .btn-red:active {
+    color: #fff;
+    box-shadow: 0 0 #bd2114;
+    top: 6.211%;
+}
+
+#readAndCheckUp .read .read-three {
+    position: absolute;
+    top: 6.604%;
+    right: 21.212%;
+}
+
+#readAndCheckUp .read .read-four {
+    position: absolute;
+    bottom: 10.849%;
+    left: 17.519%;
+}
+
+#readAndCheckUp .read .read-five {
+    position: absolute;
+    bottom: 6.604%;
+    right: 27.212%;
+}
+
+#readAndCheckUp .read h2 {
+    color: #248ab2;
+    font-size: 1.1112em;
+}
+
+#readAndCheckUp .read .read-three h2:before {
+    content: "3";
+    padding: 1px 9px;
+    /*    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/three.png);*/
+    position: absolute;
+    top: 0;
+    left: -35px;
+    color: #fff;
+    background-color: #248ab2;
+}
+
+#readAndCheckUp .read .read-four h2:before {
+    content: "4";
+    padding: 1px 9px;
+    /*    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/four.png);*/
+    position: absolute;
+    top: 0px;
+    left: -35px;
+    color: #fff;
+    background-color: #248ab2;
+}
+
+#readAndCheckUp .read .read-five h2:before {
+    content: "5";
+    padding: 1px 9px;
+    /*    background-image: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/five.png);*/
+    position: absolute;
+    top: 0;
+    left: -35px;
+    color: #fff;
+    background-color: #248ab2;
+}
+
+#readAndCheckUp .read p {
+    color: #939598;
+    font-size: 0.8889em;
+}
+
+#readAndCheckUp .checkUp-diagonal {
+    width: 100%;
+    height: 100px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-diagonal.png) center bottom no-repeat;
+}
+
+#readAndCheckUp .wrap-checkUp {
+    padding: 60px 0 100px;
+    background-color: #f3f3f3;
+}
+
+#readAndCheckUp .checkUp {
+    position: relative;
+    width: 1310px;
+    margin: 70px auto 0;
+}
+
+#readAndCheckUp .checkUp p {
+    position: absolute;
+    bottom: -3.804%;
+    left: 29.167%;
+    color: #248ab2
+}
+
+@media screen and (min-width: 1920px) {
+    #readAndCheckUp .checkUp-diagonal {
+        background-size: 100% 100%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    #readAndCheckUp .read, #readAndCheckUp .checkUp {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #readAndCheckUp .read .read-three {
+        right: 25.212%;
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    #readAndCheckUp .read h2, #readAndCheckUp .checkUp p {
+        font-size: 0.8889em;
+    }
+
+    #readAndCheckUp .checkUp p {
+        bottom: -9.596%;
+    }
+
+    #readAndCheckUp .read p {
+        font-size: 0.7778em;
+    }
+
+    #readAndCheckUp .read .read-four {
+        bottom: 13.849%;
+    }
+
+    #readAndCheckUp .read .read-five {
+        bottom: 9.604%;
+    }
+
+    #readAndCheckUp .section button {
+        font-size: 1.1112em;
+    }
+}
+
+/*company*/
 @font-face {
-  font-family: 'ex-bold-font';
-  src: url(../font/NotoSansCJKkr-Black.otf);
+    font-family: 'RixPhilB_Pro';
+    src: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/fonts/RixPhilB_Pro.eot');
+    src: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/fonts/RixPhilB_Pro.eot?#iefix') format('embedded-opentype'),
+        url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/fonts/RixPhilB_Pro.ttf') format('truetype'),
+        url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/fonts/RixPhilB_Pro.woff') format('woff');
 }
 
-*{ margin : 0; padding:0; letter-spacing:-0.05em; background-repeat: no-repeat; transition: 0.3s;}
-body{ font-family: 'main-font'; font-size: 16px; color: #21212A; word-break:keep-all; background-color: #FBFBFB; scrollbar-width:none; }
-ul,li { list-style : none; }
-button{ border: none; cursor: pointer; background-color: inherit; }
-a{ display: block; color:inherit; text-decoration:none; }
-p , span{ margin: 0; padding: 0; }
-img{ display: block; }
-h1,h2,h3,h4,h4,h5,h6{ position: relative; display: inline-block; font-size: inherit; }
-h2::before{ content: ""; position: absolute; bottom: -2px; left: 0; width: 100%; height: 3px; background-color: #FFCC04; }
-
-.section{ position: relative; width: 100%; transform: translateY(200px); opacity: 0; transition: 1s; }
-.con{ position: relative; max-width: 1320px; width: 100%; margin: 0 auto; box-sizing: border-box; }
-.tit{ font-size: 26px; margin-bottom: 24px; }
-.tag{ position: relative; display: inline-block; padding: 0 10px; margin-bottom: 16px; }
-.tag::before{ content: ""; position: absolute; transform: translate(0,-50%); top: 50%; left: 0; width: 2px; height: 10px; background-color: #FFCC04; }
-.tag::after{ content: ""; position: absolute; transform: translate(0,-50%); top: 50%; right: 0; width: 2px; height: 10px; background-color: #FFCC04; }
-
-.tap{ display: flex; text-align: center; }
-.tap li{ width: 120px; height: 46px; line-height: 46px; border-left: 0; transition: 0; }
-.tap li:first-child{ border-left: 1px solid #cecece; }
-.tap li a{ width: 100%; height: 100%; border: 1px solid #CECECE; box-sizing: border-box; }
-.tap li:hover{ background-color: #F5F5F5; transition: 0; }
-.tap li a.active{ border: 1px solid #FFCC04; font-weight: 800; background-color: #FFCC04; }
-
-.go_to{ display: inline-block; padding: 8px 32px; border: 1px solid #ffffff; }
-.go_to:hover{ background-color: #FFCC04; color: #21212A; border: 1px solid #FFCC04; }
-
-.section.scr{ transform: translateY(0); opacity: 1; transition: 0.5s; }
-
-/* header */
-header{ position: fixed; width: 100%; height: 84px; background-color: rgba(16,16,16,0.6); z-index: 999;}
-header h1{position: absolute; transform: translate(0 , -50%); top: 50%; left: 50px; width: 109px; height: 32px; background-image: url(../img/logo_white.png); background-position: center; background-size: cover; text-indent: 100%; white-space: nowrap; overflow: hidden; }
-header h1 a{ width: 100%; height: 100%; }
-header .nav_wrap ul{ position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; display: flex; justify-content: space-between; width: 876px; font-size: 18px; color: #ffffff; }
-header .nav_wrap ul li{ width: 108px; text-align: center; }
-header .util{ position: absolute; transform: translate(0,-50%); top: 50%; right: 50px; display: flex; }
-header .util li{ position: relative; font-size: 15px; color: #ffffff; padding-left: 48px; margin-left: 24px; }
-header .util li:first-child{ margin: 0; padding: 0;}
-header .util li::before{ content: ""; position: absolute; transform: translate(0,-50%); top: 50%; left: 0; width: 1px; height: 14px; background-color: #ffffff; }
-header .util li:first-child::before{ display: none; }
-header .util li.search{ background-image: url(../img/icon_search.png); background-position: center; }
-header .util li.login{ background-image: url(../img/icon_login.png); background-position: 24px center; }
-header .util li.newsletter{ background-image: url(../img/icon_news.png); background-position: 24px center; }
-header .util li:first-child a{ text-indent: 100%; white-space: nowrap; overflow: hidden; width: 24px; }
-
-/* section01 */
-.section01{ height: 900px; background-image: url(../img/main.png); background-size: cover; }
-.section01 .wrap{ width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(16,16,16,0.6), rgba(16,16,16,0));}
-.section01 .wrap .con{ display: flex; height: 100%; flex-direction: column; padding-top: 208px; box-sizing: border-box; }
-.section01 .wrap .con div{ color: #ffffff; }
-.section01 .wrap .con div p.tag{ position: relative; margin-bottom: 36px; padding-left: 24px; font-size: 16px; }
-.section01 .wrap .con div p.tag::before{ content: ""; position: absolute; transform: translate(0,-50%);top: 50%; left: 0; width: 16px; height: 100%; border: 3px solid #FFCC04; box-sizing: border-box; background-color: inherit; }
-.section01 .wrap .con div p.tag::after{ display: none; }
-.section01 .wrap .con div p.title{ font-size: 36px; font-weight: 800; margin-bottom: 14px; }
-.section01 .wrap .con div p.text{ font-size: 24px; font-weight: 600; margin-bottom: 54px; }
-.section01 .wrap .con div p.text span{ color: #FFCC04; }
-.section01 .wrap .con div a.go_to{ display: inline-block; }
-
-.section01 .wrap .con div.img_wrap{ margin-top: auto; margin-bottom: 80px; }
-.section01 .wrap .con div.img_wrap ul{ display: flex; float: right; }
-.section01 .wrap .con div.img_wrap ul li{ width: 312px; height: 180px; margin: 0 12px; background-size: cover; border: 1px solid rgba(255,204,4,0.2); box-sizing: border-box; box-shadow: 0px 0px 10px rgba(0,0,0,0.7); }
-.section01 .wrap .con div.img_wrap ul li:nth-child(1){ background-image: url(../img/slide01_01.jpg); }
-.section01 .wrap .con div.img_wrap ul li:nth-child(2){ background-image: url(../img/slide01_02.jpg); }
-.section01 .wrap .con div.img_wrap ul li:nth-child(3){ background-image: url(../img/slide01_03.jpg); }
-
-/* 섹션02 */
-.section02 .con{ display: flex; justify-content: space-between; margin-top: 86px; margin-bottom: 126px; }
-.section02 .con .item01{ max-width: 760px; width: 100%; }
-.section02 .con .item01 .news_list{ width: 100%; }
-.section02 .con .item01 .news_list li{ margin-bottom: 12px; background-size: 100%; background-position: center; }
-.section02 .con .item01 .news_list li:hover{ box-shadow: 0px 0px 6px rgba(16,16,16,0.2); background-size: 105%; }
-.section02 .con .item01 .news_list li:last-child{ margin-bottom: 0; }
-.section02 .con .item01 .news_list li a{ position: relative; height: 423px; background:linear-gradient(to top, rgba(16,16,16,0.6), rgba(16,16,16,0)); }
-.section02 .con .item01 .news_list li a div{ position: absolute; bottom: 40px; left: 40px; color: #ffffff; }
-.section02 .con .item01 .news_list li a div .text{ font-size: 18px; }
-.section02 .con .item02{ max-width: 536px; width: calc(100% - 24px); }
-.section02 .con .item02 ul li{ height: 162px; padding: 12px; margin-bottom: 12px; border: 1px solid #cecece; box-sizing: border-box; }
-.section02 .con .item02 ul li:hover{ box-shadow: 0px 0px 6px rgba(16,16,16,0.2); }
-.section02 .con .item02 ul li a{ display: flex; width: 100%; height: 100%; }
-.section02 .con .item02 ul li a .img_wrap{ width: 180px; height: 100%; margin-right: 24px; background-size: 100%; background-position: center; }
-.section02 .con .item02 ul li a .text_wrap{ width: calc(100% - 180px); }
-.section02 .con .item02 ul li a .text_wrap .text{ display: -webkit-box; height: 72px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
-
-
-/* 섹션03 */
-.section03{ background-image: url(../img/section03_bg.jpg); background-size: cover; }
-.section03 .wrap{ background-color: rgba(0,0,0,0.7); color: #ffffff; }
-.section03 .wrap .con{ padding-top: 160px; padding-bottom: 64px; }
-.section03 .wrap .con .text_wrap{ text-align: center; margin-bottom: 80px; }
-.section03 .wrap .con .text_wrap .title{ margin-bottom: 54px; font-size: 36px; font-weight: 800; }
-.section03 .wrap .con .text_wrap .text{ width: 828px; margin: 0 auto; margin-bottom: 64px; font-size: 18px; }
-.section03 .wrap .con .text_wrap .text span{ color: #FFCC04; }
-.section03 .wrap .con .text_wrap .go_to{ padding: 14px 32px; border: 1px solid #FFCC04; background-color: rgba(0,0,0,0.4); }
-.section03 .wrap .con .slide_section{ padding: 0 26px; box-sizing: border-box; }
-.section03 .wrap .con .slide_section .other{ margin-bottom: 16px; font-size: 14px; }
-.section03 .wrap .con .slide_section .slide_wrap{ position: relative; width: 100%; min-height: 200px; box-sizing: border-box; }
-.section03 .wrap .con .slide_section .slide_wrap .slide_arrows{ position: absolute; transform: translate(0,-50%); top:50%; width: 54px; height: 54px; }
-.section03 .wrap .con .slide_section .slide_wrap .slide_arrows.arrow_left{ left: -27px; background-image: url(../img/icon_slide_arrow.png); }
-.section03 .wrap .con .slide_section .slide_wrap .slide_arrows.arrow_right{ right: -27px; background-image: url(../img/icon_slide_arrow.png); transform: translate(0,-50%) rotate(-180deg); }
-.section03 .wrap .con .slide_section .slide_wrap .item_wrap .item{ display: block; height: auto; border: 1px solid #414141; background-color: red; box-sizing: border-box; overflow: hidden; }
-.section03 .wrap .con .slide_section .slide_wrap .item_wrap .item img{ width: 100%; }
-.section03 .slick-list{ margin: 0 -20px; }
-.section03 .slick-slide{ margin: 0 20px; }
-
-/* 섹션04 */
-.section04{ padding-top: 124px; padding-bottom: 120px; }
-.section04 .con{ position: relative; }
-.section04 .con .tit{ margin-bottom: 24px; }
-.section04 .con .more{ position: absolute; top: 18px; right: 0; padding-right: 20px; color: #808080; background-image: url(../img/icon_moreArrow.png); background-size: 20px; background-position: 100% 3px; background-size: 20px; }
-.section04 .con .tap{ margin-bottom: 38px; }
-.section04 .con .news_wrap{ display: flex; justify-content: space-between; }
-.section04 .con .news_wrap .news_item{ width: calc((100% - 24px * 3)/4); min-height: 200px; border: 1px solid #CECECE; box-sizing: border-box; }
-.section04 .con .news_wrap .news_item .img_wrap{ height: 240px; margin-bottom: 24px; background-size: cover; }
-.section04 .con .news_wrap .news_item .item_bottom{ display: flex; flex-direction: column; padding: 20px; padding-top: 0; box-sizing: border-box; }
-.section04 .con .news_wrap .news_item .item_bottom .text_wrap .title{ margin-bottom: 14px; font-size: 18px; font-weight: 800; }
-.section04 .con .news_wrap .news_item .item_bottom .text_wrap .text{ display: -webkit-box; height: 50px; margin-bottom: 14px; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.section04 .con .news_wrap .news_item .item_bottom .go_to{ margin-left: auto; border: 1px solid #CECECE; box-sizing: border-box; }
-.section04 .con .news_wrap .news_item .item_bottom .go_to:hover{ border: 1px solid #FFCC04; }
-
-/* 섹션05 */
-.section05{ background-image: url(../img//section05_bg.jpg); background-size: cover; background-position: center; }
-.section05 .wrap { background-color: rgba(0,0,0,0.4); }
-.section05 .wrap .con{ padding-top: 144px; padding-bottom: 144px; color: #ffffff; }
-.section05 .wrap .con .text_wrap{ width: 40%; }
-.section05 .wrap .con .text_wrap .tit{ margin-bottom: 64px; }
-.section05 .wrap .con .text_wrap .tit::before{ display: none; }
-.section05 .wrap .con .text_wrap .text{ font-size: 18px; line-height: 1.8; margin-bottom: 84px; }
-.section05 .wrap .con .text_wrap .go_to{ padding: 14px 32px; border: 1px solid #FFCC04; background-color: rgba(0,0,0,0.4); }
-
-/* 푸터 */
-footer{ width: 100%; background-color: #101010; color: #ffffff; }
-footer .footer_top{ height: 56px; border-bottom: 1px solid #373737; }
-footer .footer_top .con{ display: flex; justify-content: space-between; }
-footer .footer_top .detail{ display: flex; line-height: 56px; text-align: center; }
-footer .footer_top .detail li a{ position: relative; width: 108px; padding: 0 16px; font-size: 14px; border-left: 1px solid #373737; }
-footer .footer_top .detail li:last-child a{ border-right: 1px solid #373737; }
-footer .footer_top .sns{ display: flex; flex-direction: row-reverse; }
-footer .footer_top .sns li a{ position: relative; width: 56px; height: 56px; }
-footer .footer_top .sns li a img{ position: absolute; transform: translate(-50%,-50%); top:50%; left: 50%; }
-footer .footer_bottom{ display: flex; justify-content: space-between; padding-top: 54px; padding-bottom: 100px; }
-footer .footer_bottom .copy_wrap{ width: calc(50% - 24px) }
-footer .footer_bottom img{ margin-bottom: 38px; }
-
-/* top 버튼 */
-.go_top{ position: fixed; right: 80px; bottom: 120px; width: 64px; height: 64px; text-align: center; font-size: 18px; font-weight: 900; color: #21212A; line-height: 60px; border: 2px solid #FFCC04; box-shadow: 8px 8px 0px #FFCC04; z-index: 998; }
-
-/* 모바일헤더 관련 */
-body.active{ overflow: hidden; }
-header .m_menu_open{ display: none; }
-header .m_menu_open{ position: absolute; transform: translate(0,-50%); top: 50%; right: 20px; width: 46px; height: 46px; background-color: rgba(0,0,0,0); }
-header .m_menu_open .bar{ position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; display: block; width: 22px; height: 2px; background-color: #ffffff; }
-header .m_menu_open .bar.bar01{ top: 30%; }
-header .m_menu_open .bar.bar02{ top: 50%; }
-header .m_menu_open .bar.bar03{ top: 70%; }
-
-header .m_menu_open.active .bar.bar01{ top: 50%; transform: translate(-50%,-50%) rotate(45deg); }
-header .m_menu_open.active .bar.bar02{ display: none; }
-header .m_menu_open.active .bar.bar03{ top: 50%; transform: translate(-50%,-50%) rotate(-45deg); }
-
-body.active header .mobile_menu_wrap{ left: 0; }
-header .mobile_menu_wrap{ position: absolute; top: 0; left: 100%; width: 100vw; height: 100vh; padding-top: 84px; background-color: rgba(0,0,0,0.8); color: #ffffff; backdrop-filter: blur(4px); box-sizing: border-box; z-index: -1; }
-header .mobile_menu_wrap .top_wrap{ display: flex; border-top: 1px solid #414141; border-bottom: 1px solid #414141; }
-header .mobile_menu_wrap .top_wrap a{ position: relative; width: 50%; font-size: 16px; line-height: 84px; text-align: center; box-sizing: border-box; }
-header .mobile_menu_wrap .top_wrap a span{ padding-left: 28px; background-position-y:50%; }
-header .mobile_menu_wrap .top_wrap .m_login{ border-right: 1px solid #414141; }
-header .mobile_menu_wrap .top_wrap .m_login span{ background-image: url(../img/icon_login.png); }
-header .mobile_menu_wrap .top_wrap .m_newsletter span{ background-image: url(../img/icon_news.png); }
-header .mobile_menu_wrap .bottom_wrap{ width: 100%; padding: 0 80px; padding-top: 80px; box-sizing: border-box;}
-header .mobile_menu_wrap .bottom_wrap ul{ float: right; }
-header .mobile_menu_wrap .bottom_wrap ul li a{ font-size: 24px; line-height: 82px; font-weight: 800; text-align: right; }
-
-/* 스크롤액션 */
-.section02 .con .item01{ transform: translateY(200px); transition: 0.8s; }
-.section02.scr .con .item01{ transform: translateY(0); }
-.section02 .con .item02{ transform: translateY(400px); transition: 1.2s; }
-.section02.scr .con .item02{ transform: translateY(0); }
-.section03{ transform: translateY(0); }
-.section03 .wrap .con .text_wrap .title{ opacity: 0; transition: 1s; transition-delay: 0.3s; }
-.section03.scr .wrap .con .text_wrap .title{ opacity: 1; }
-.section03 .wrap .con .text_wrap .text{ opacity: 0; transition: 1s; transition-delay: 0.6s; }
-.section03.scr .wrap .con .text_wrap .text{ opacity: 1; }
-.section03 .wrap .con .text_wrap .go_to{ opacity: 0; transition: 1s; transition-delay: 0.9s; }
-.section03.scr .wrap .con .text_wrap .go_to{ opacity: 1; }
-.section03 .wrap .con .slide_section{ transform: scale(0.95); opacity: 0; transition: 1s; transition-delay: 1.2s; }
-.section03.scr .wrap .con .slide_section{ transform: scale(1); opacity: 1; }
-.section04{ transform: translateY(0); opacity: 1; }
-.section04 .con .tit{ transform: translateX(-100px); opacity: 0; }
-.section04.scr .con .tit{ transform: translateX(0); opacity: 1; transition: 1s; }
-.section04 .con .tap{ transform: translateY(100px); opacity: 0; }
-.section04.scr .con .tap{ transform: translateY(0); opacity: 1; transition: 1s; }
-.section04 .con .news_wrap .news_item{ transform: translateY(100px); opacity: 0; }
-.section04.scr .con .news_wrap .news_item{ transform: translateY(0); opacity: 1; transition: 1s; }
-.section04 .con .news_wrap .news_item:nth-child(1){ transition-delay: 0.5s; }
-.section04 .con .news_wrap .news_item:nth-child(2){ transition-delay: 0.6s; }
-.section04 .con .news_wrap .news_item:nth-child(3){ transition-delay: 0.7s; }
-.section04 .con .news_wrap .news_item:nth-child(4){ transition-delay: 0.8s; }
-.section05{ transform: translateY(0); }
-.section05 .wrap .con .text_wrap .tit{ transform: translateY(100px); opacity: 0; transition: 1s; transition-delay: 0.3s; }
-.section05.scr .wrap .con .text_wrap .tit{ transform: translateY(0); opacity: 1;; }
-.section05 .wrap .con .text_wrap .text{ transform: translateY(100px); opacity: 0; transition: 1s; transition-delay: 0.6s; }
-.section05.scr .wrap .con .text_wrap .text{ transform: translateY(0); opacity: 1; }
-.section05 .wrap .con .text_wrap .go_to{ transform: translateY(100px);opacity: 0; transition: 1s; transition-delay: 0.9s; }
-.section05.scr .wrap .con .text_wrap .go_to{ transform: translateY(0);opacity: 1; }
-
-
-@media ( max-width : 1500px ) {
-  header .nav_wrap ul{ width: 50%; left: 45%; }
+#company {
+    padding-bottom: 40px;
 }
 
-@media (max-width : 1320px ){
-  .con{ padding: 0 20px; }
-
-  header h1{ left: 20px; }
-  header .util{ right: 20px; }
-
-  .section01 .wrap .con div.img_wrap ul{ float: inherit; margin: 0 auto; justify-content: center; }
-
-  .section02 .con .item01{ margin-right: 24px; }
-  .section02 .con .item02{ width: calc(50% - 24px); }
-
-  .section04 .con .news_wrap .news_item .img_wrap{ height: 180px; }
-  .section04 .con .more{ right: 20px; }
+#company .section .sub-main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/company-main.png) center top no-repeat;
+    background-size: cover;
 }
 
-@media ( max-width : 1280px ) {
-  .section02 .con .item01{ width: 50%; }
-  .section02 .con .item02{ width: 100%; }
+#company .section .sub-main .main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -81px 0 0 -365px;
 }
 
-@media ( max-width : 1024px ) {
-  header .nav_wrap{ display: none; }
-  header .util{ right: 80px; }
-  header .util li{ display: none; }
-  header .util li.search{ display: block; background-size: 24px; }
-  header .m_menu_open{ display: block; }
-  
-  .section01 .wrap .con div{ text-align: center; }
-
-  .section02 .con{ flex-direction: column; margin-top: 64px; margin-bottom: 64px; }
-  .section02 .con .item01{ max-width: inherit; width: 100%; margin: 0; margin-bottom: 64px; }
-  .section02 .con .item01 .news_list{ display: flex; justify-content: space-between; width: 100%; }
-  .section02 .con .item01 .news_list li{ width: calc(50% - 12px); margin-bottom: 0; }
-  .section02 .con .item01 .news_list li a{ height: 280px; }
-  .section02 .con .item02{ max-width: inherit; }
-  
-  .section03 .wrap .con{ padding-top: 64px; overflow: hidden; }
-  .section03 .wrap .con .text_wrap{ margin-bottom: 64px; }
-  .section03 .wrap .con .text_wrap .title{ margin-bottom: 34px; }
-  .section03 .wrap .con .slide_section .slide_wrap .item_wrap{ width: 100vw; }
-
-  .section04{ padding-top: 64px; padding-bottom: 64px; }
-  .section04 .con .news_wrap{ flex-wrap: wrap; }
-  .section04 .con .news_wrap .news_item{ width: calc(50% - 9px); margin-bottom: 18px; background-size: cover; }
-  .section04 .con .news_wrap .news_item:nth-child(n+3){ margin: 0; }
-  .section04 .con .news_wrap .news_item .img_wrap{ height: 240px; }
-  .section05 .wrap .con{ padding-top: 64px; padding-bottom: 64px; }
-  .section05 .wrap .con .text_wrap{ width: 100%; text-align: center; }
-  .section05 .wrap .con .text_wrap .text{ margin: 0 115px; margin-bottom: 64px; }
-
-  footer .footer_top{ position: relative; height: auto; }
-  footer .footer_top::before{ content: ""; position: absolute; top: 50%; left: 0; width: 100vw; height: 1px; border-top: 1px solid #373737; }
-  footer .footer_top .con{ flex-direction: column-reverse; }
-  footer .footer_top .sns{ justify-content: center; }
-  footer .footer_top .detail{ width: 100%; }
-  footer .footer_top .detail li{ width: 25%; }
-  footer .footer_top .detail li a{ width: 100%; padding: 0; }
-  footer .footer_top .detail li:first-child a{ border-left: 0; }
-  footer .footer_top .detail li:last-child a{ border-right: 0; }
-  footer .footer_bottom .copy_wrap{ width: 100%; }
+#company .section .sub-main .diagonal {
+    position: absolute;
+    bottom: 0;
 }
 
-@media ( max-width : 768px ){
-  .con{ padding: 0 12px; }
-  .tit{ font-size: 18px; margin-bottom: 12px; }
-  .go_to{ padding: 12px 32px; font-size: 14px; }
-  .tag{ margin-bottom: 6px; font-size: 14px; }
-  .tap{ flex-wrap: wrap; }
-  .tap li{ width: 33.333%; box-sizing: border-box; }
+#company .wrap-company .container {
+    width: 1000px;
+}
 
-  header{ height: 68px; }
-  header h1{ left: 12px; }
-  header .util{ right: 64px; }
-  header .m_menu_open{ right: 12px; }
+#company .wrap-company .container .wrap-content {
+    display: flex;
+    -webkit-display: flex;
+    padding: 65px 0 40px;
+}
 
-  .section01 .wrap .con div p.tag{ font-size: 14px; }
-  .section01 .wrap .con div p.title{ font-size: 24px; }
-  .section01 .wrap .con div p.text{ font-size: 15px; }
+#company .wrap-company .container .wrap-content .content-l {
+    flex: 1;
+    margin-right: 10px;
+}
 
-  .section01{ height: auto; }
-  .section01 .wrap .con{ padding-top: 132px; padding-bottom: 64px; }
-  .section01 .wrap .con div{ margin-bottom: 64px; }
-  .section01 .wrap .con div.img_wrap{ margin-bottom: 0; }
-  .section01 .wrap .con div.img_wrap ul{ flex-wrap: wrap; justify-content: flex-start; }
-  .section01 .wrap .con div.img_wrap ul li{ width: calc(50% - 24px); }
-  .section01 .wrap .con div.img_wrap ul li:nth-child(n+3){ margin-top: 24px; }
+#company .wrap-company .container .wrap-content .content-l li {
+    display: flex;
+    -webkit-display: flex;
+    margin-bottom: 10px;
+}
 
-  .section02 .con .item01{ margin-bottom: 38px; }
-  .section02 .con .item01 .news_list{ flex-direction: column; }
-  .section02 .con .item01 .news_list li{ width: 100%; }
-  .section02 .con .item01 .news_list li:first-child{ margin-bottom: 8px; }
-  .section02 .con .item01 .news_list li a div{ bottom: 18px; left: 14px; }
-  .section02 .con .item01 .news_list li a div .text{ font-size: 16px; }
-  .section02 .con .item02 ul li{ padding: 8px; }
+#company .wrap-company .container .wrap-content .content-l li .title {
+    width: 180px;
+    height: 50px;
+    color: #fff;
+    font-size: 0.8889em;
+    text-align: right;
+}
 
-  .section03 .wrap .con .text_wrap .text{ width: 100%; margin-bottom: 50px; font-size: 15px; }
-  .section03 .wrap .con .text_wrap .title{ font-size: 24px; margin-bottom: 50px; }
-  .section03 .wrap .con .slide_section .other{ text-align: center; }
+#company .wrap-company .container .wrap-content .content-l li:nth-child(1) .title {
+    padding: 7px 10px;
+    background-color: #f49d1e;
+}
 
-  .section03 .slick-list{ margin: 0 -6px; }
-  .section03 .slick-slide{ margin: 0 6px; }
+#company .wrap-company .container .wrap-content .content-l li:nth-child(2) .title {
+    padding: 15px 10px;
+    background-color: #17a779;
+}
 
-  .section04{ padding-top: 54px; }
-  .section04 .con .more{ top: 0; }
-  .section04 .con .news_wrap{ display: block; }
-  .section04 .con .news_wrap .news_item{ width: 100%; }
-  .section04 .con .news_wrap .news_item .img_wrap{ margin-bottom: 16px; }
-  .section04 .con .news_wrap .news_item:nth-child(n+3){ margin-bottom: 16px; }
-  .section04 .con .news_wrap .news_item:last-child{ margin-bottom: 0; }
-  .section04 .con .news_wrap .news_item .item_bottom{ padding: 12px; padding-top: 0; }
-  .section04 .con .news_wrap .news_item .item_bottom .text_wrap .title{ height: 54px; font-size: 18px; }
-  .section04 .con .news_wrap .news_item .item_bottom .text_wrap .text{ font-size: 15px; }
+#company .wrap-company .container .wrap-content .content-l li:nth-child(3) .title {
+    padding: 15px 10px;
+    background-color: #ef4849;
+}
 
-  .section05 .wrap .con .text_wrap .tit{ font-size: 24px; }
-  .section05 .wrap .con .text_wrap .text{ width: 100%; font-size: 15px; margin: 0 auto; margin-bottom: 50px; }
+#company .wrap-company .container .wrap-content .content-l li:nth-child(4) .title {
+    padding: 7px 10px;
+    background-color: #8d3a96;
+}
 
-  footer .footer_top{ border-top: 1px solid #373737; border-bottom: 0; }
-  footer .footer_top .con{ padding: 0; }
-  footer .footer_top .detail{ flex-wrap: wrap; }
-  footer .footer_top .detail li{ width: 50%; }
-  footer .footer_top .detail li a{ border-bottom: 1px solid #373737; }
-  footer .footer_top::before{ display: none; }
-  footer .footer_top .sns{ border-bottom: 1px solid #373737; }
+#company .wrap-company .container .wrap-content .content-l li:nth-child(5) .title {
+    padding: 15px 10px;
+    background-color: #416db4;
+}
 
-  .go_top{ right: 24px; width: 56px; height: 56px; line-height: 52px; font-size: 16px; }
+#company .wrap-company .container .wrap-content .content-l li .content {
+    width: 60%;
+    padding-left: 20px;
+    border-top: 2px dashed #d1d3d4;
+    border-right: 2px dashed #d1d3d4;
+    border-bottom: 2px dashed #d1d3d4;
+    font-size: 1.2223em;
+    line-height: 46px;
+}
+
+#company .wrap-company .container .wrap-content .content-l li:nth-child(1) .content {
+    color: #f49d1e;
+}
+
+#company .wrap-company .container .wrap-content .content-l li:nth-child(2) .content {
+    color: #17a779;
+}
+
+#company .wrap-company .container .wrap-content .content-l li:nth-child(3) .content {
+    color: #ef4849;
+}
+
+#company .wrap-company .container .wrap-content .content-l li:nth-child(4) .content {
+    color: #8d3a96;
+}
+
+#company .wrap-company .container .wrap-content .content-l li:nth-child(5) .content {
+    color: #416db4;
+}
+
+#company .wrap-company .container .wrap-content .content-r {
+    flex: 1;
+}
+
+#company .wrap-company .container p {
+    font-size: 1.5556em;
+    font-weight: 300;
+    color: #808285;
+    text-align: center;
+}
+
+#company .wrap-company .container p span {
+    font-weight: 600;
+    color: #fd6d40;
+}
+
+#company .section .company-diagonal {
+    width: 100%;
+    height: 100px;
+    margin-top: 45px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-diagonal.png) center bottom no-repeat;
+}
+
+#company .section .hello-bg, #HighlightsLibrary .section .wrap-children {
+    width: 100%;
+    padding: 60px 0 100px;
+    background-color: #f3f3f3;
+}
+
+#company .section .wrap-hello {
+    display: flex;
+    -webkit-display: flex;
+}
+
+#company .section .hello-img {
+    margin: 0 30px 0 50px;
+    ;
+    text-align: center;
+}
+
+#company .section .hello-img .job {
+    font-size: 0.7778em;
+    letter-spacing: -0.6px;
+}
+
+#company .section .hello-img .president_name {
+    font-family: 'RixPhilB_Pro', sans-serif;
+    font-size: 1.6667em;
+}
+
+#company .section .hello {
+    font-family: 'RixPhilB_Pro', sans-serif;
+    font-size: 1.6112em;
+    line-height: 95%;
+}
+
+#company .section .andy-sign {
+    position: absolute;
+    bottom: -9.877%;
+    right: 0;
+}
+
+@media screen and (min-width: 1920px) {
+    #company .section .company-diagonal {
+        background-size: 100% 100%;
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    #company .wrap-company .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #company .hello-bg .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #company .wrap-company .container .wrap-content .content-l li .content {
+        font-size: 0.8334em;
+    }
+
+    #company .wrap-company .container p {
+        font-size: 1.3334em;
+    }
+
+    #company .section .andy-sign {
+        right: 10px;
+    }
+
+    #company .section .hello-img .president_name {
+        font-size: 1.27em;
+    }
+}
+
+/*HighlightsLibrary*/
+#HighlightsLibrary, #ourContents, #levelSystem, #booksForYou, #readAndCheckUp, #mobileApps, #company {
+    padding-bottom: 0;
+}
+
+#HighlightsLibrary {
+    overflow: hidden;
+}
+
+#HighlightsLibrary .section .sub-main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/HighlightsLibrary-main.jpg) center top no-repeat;
+    background-size: cover;
+}
+
+#HighlightsLibrary .section .main-title-wrap {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;
+}
+
+#HighlightsLibrary .section .main-title-wrap .main-title {
+    position: absolute;
+    margin: -140px 0 0 0;
+    top: 41%;
+    right: 5px;
+}
+
+#HighlightsLibrary .section .main-title-wrap a {
+    cursor: default;
+}
+
+#HighlightsLibrary .section .main-title-wrap a .main-title img {
+    cursor: pointer;
+}
+
+#HighlightsLibrary .section .main-title {
+    position: absolute;
+    margin: -140px 0 0 0;
+    top: 50%;
+    right: 5px;
+}
+
+#HighlightsLibrary .section .wrap-content {
+    padding: 95px 0 20px;
+}
+
+#HighlightsLibrary .section .wrap-content ul li {
+    margin-top: -60px;
+}
+
+#HighlightsLibrary .section .wrap-content ul li:nth-child(2n-1) .hexagon {
+    float: left;
+    margin: 0 40px 0 -70px;
+}
+
+#HighlightsLibrary .section .wrap-content ul li:nth-child(2n) .hexagon {
+    float: right;
+    margin: 0 -70px 0 40px;
+}
+
+#HighlightsLibrary .section .wrap-content ul li:nth-child(2n) .content {
+    float: right;
+    text-align: right;
+}
+
+#HighlightsLibrary .section .wrap-content ul li .content h2 {
+    padding: 70px 0 35px 0;
+    font-size: 1.5556em;
+}
+
+#HighlightsLibrary .section .wrap-content ul li .content p {
+    color: #808285;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+}
+
+#HighlightsLibrary .section .HighlightsLibrary-diagonal {
+    width: 100%;
+    height: 100px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-diagonal.png) center bottom no-repeat;
+    background-size: 100% 90%;
+}
+
+#HighlightsLibrary .wrap-children {
+    text-align: center;
+}
+
+#HighlightsLibrary .section .wrap-children .diagram {
+    padding-top: 80px;
+}
+
+.contactUs {
+    width: 100%;
+    padding: 30px 0 70px 0;
+    background: #4d4d4f;
+}
+
+.contactUs .container {
+    height: auto;
+}
+
+.contactUs .contact-title {
+    position: relative;
+    float: left;
+    padding-top: 10px;
+    font-weight: 100;
+    font-size: 28px;
+    color: #fff;
+}
+
+.contactUs .contact-title .line {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: 0;
+    border: 2px solid #248ab2;
+}
+
+.contactUs .contact-email {
+    float: right;
+    color: #fff;
+}
+
+.contactUs .contact-question {
+    float: right;
+    padding-right: 40px;
+}
+
+.contactUs .contact-email>p, .contactUs .contact-question>p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.contactUs .contact-email .contact-email-con, .contactUs .contact-question .contact-question-con {
+    padding-top: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.contactUs .contact-email p a, .contactUs .contact-question p a {
+    padding-top: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.contactUs .contact-email p a:hover, .contactUs .contact-question p a:hover {
+    color: #44c8f5;
+    cursor: pointer;
+}
+
+.contactUs .contact-img {
+    float: right;
+    padding-right: 10px;
+}
+
+@media screen and (min-width: 1920px) {
+    #HighlightsLibrary .section .company-diagonal {
+        background-size: 100% 100%;
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    #HighlightsLibrary .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #HighlightsLibrary .section .wrap-content ul li {
+        margin-top: 0;
+    }
+
+    #HighlightsLibrary .section .wrap-content ul li .content p {
+        font-size: 16px;
+    }
+
+    .contactUs .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+}
+
+/* Sign in */
+#signin {
+    padding: 0;
+}
+
+#signin header {
+    width: 100%;
+    height: 60px;
+    background: #248ab2;
+    border-radius: 10px 10px 0 0;
+}
+
+#signin header h1 {
+    width: 100%;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.sign {
+    padding: 80px 0 90px;
+}
+
+.sign h1 {
+    margin-bottom: 0;
+    font-size: 1.666666666666667rem;
+    /*30/18*/
+    line-height: 1;
+    text-align: center;
+    color: #414042;
+    letter-spacing: -0.05em;
+}
+
+.sign h1 span {
+    color: #eb485b;
+}
+
+.sign h1 span br {
+    display: none;
+}
+
+.sign_info {
+    width: 72.65625%;
+    /*744/1024*/
+    margin: 0 auto;
+}
+
+.sign_info.type2 {
+    padding: 54px 0 0;
+}
+
+.sign_info div input,
+.sign_info div select {
+    display: block;
+    width: 38.17204301075269%;
+    /* 284/744 */
+    float: left;
+    margin-right: 2.68817204301075%;
+    /* 20/744 */
+    margin-bottom: 22px;
+    padding: 0 4.83870967741935%;
+    /*36/744*/
+    height: 54px;
+    border: 3px solid #bcbec0;
+    border-radius: 10px;
+    font-size: 1.222222222222222rem;
+    /*22/18*/
+    color: #414042;
+}
+
+.sign_info div select {
+    margin-bottom: 0;
+}
+
+.sign_info div input:nth-child(2) {
+    margin-right: 0;
+}
+
+.sign_info div.email input {
+    width: 89.65%;
+    /* 64.8% */
+}
+
+.sign_info div.email2 input,
+.sign_info div.id input {
+    /*2017-09-11*/
+    width: 89.51612903225806%;
+    /*666/744*/
+}
+
+.sign_info div.pw input {
+    /*2017-09-11*/
+    width: 60%;
+    margin: 0 auto 22px;
+    float: none;
+}
+
+.sign_info .email button {
+    margin-top: 0px;
+    width: 22%;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.sign_info>div {
+    overflow: hidden;
+}
+
+.sign_info div select {
+    width: 100%;
+    height: 60px;
+    padding: 0 4%;
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 50%;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn-select.png) 97.08602150537634% center no-repeat;
+}
+
+.sign_info div select::-ms-expand {
+    display: none;
+    /* 화살표 없애기 for IE10, 11*/
+}
+
+.sign_info div select:required:invalid {
+    color: #a5a5a5;
+}
+
+.sign_info div option[value=""][disabled] {
+    display: none;
+}
+
+.sign_info div option {
+    color: #414042;
+}
+
+.sign_info div p {
+    clear: both;
+    min-height: 40px;
+    color: #ea485b;
+    font-size: 1.222222222222222rem;
+    /*22/18*/
+    text-align: center;
+}
+
+.sign_btn {
+    margin-top: 20px;
+    text-align: center;
+    overflow: visible !important;
+}
+
+.sign_btn button {
+    width: 47.04301075268817%;
+    /*350/744*/
+    height: 60px;
+    border-radius: 60px;
+    font-size: 1.555555555555556em;
+    /*28/18*/
+}
+
+.sign_btn.row2 button {
+    /*2017-09-11*/
+    width: 60%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.sign .content-area {
+    overflow: hidden;
+    padding: 54px 2.03252032520325% 0;
+}
+
+.sign .content-area li {
+    float: left;
+    width: 18.9%;
+    margin-right: 1.375%;
+    margin-bottom: 40px;
+}
+
+.sign .content-area li:nth-child(5n+5) {
+    margin-right: 0;
+}
+
+.content-area+.sign_btn {
+    margin-top: 0;
+}
+
+.content-area+.sign_btn button {
+    width: 34.1796875%;
+    /*350/1024*/
+    font-size: 1.555555555555556em;
+    /*28/18*/
+}
+
+.sign .content-area li a {
+    display: block;
+    position: relative;
+}
+
+.sign .content-area li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#signin .login {
+    margin: 0 auto;
+    padding: 54px 0 0;
+    width: 400px;
+}
+
+#signin .login div {
+    text-align: center;
+}
+
+#signin .login div div {
+    width: 82%;
+    margin: 0 auto 20px;
+}
+
+#signin .login label {
+    display: inline-block;
+    padding-right: 3%;
+    width: 23.0769%;
+    font-size: 0.8889em;
+    color: #248ab2;
+    text-align: right;
+}
+
+.agree {
+    padding-top: 4%;
+    overflow: hidden;
+}
+
+#signin #save_id,
+.agree #agree {
+    margin-top: 4px;
+    float: right;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #d1d3d4;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #fff;
+    padding: 0;
+}
+
+.agree label {
+    margin-left: 10px;
+    float: right;
+    width: inherit;
+}
+
+#signin .login input {
+    width: 58%;
+    padding: 0 6.1538%;
+    height: 41px;
+    border: 2px solid #d1d3d4;
+    border-radius: 45px;
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
+    font-size: 0.8889em;
+}
+
+#signin .login label.save-id {
+    float: right;
+    width: inherit;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 8.5%;
+}
+
+#signin .login button {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 87.5%;
+    /*350/400*/
+    height: 60px;
+    border-radius: 60px;
+    font-size: 1.555555555555556em;
+    /*28/18*/
+}
+
+@media screen and (max-width: 1050px) {
+    .sign h1 span br {
+        display: block;
+    }
+
+    .sign_info div input,
+    .sign_info div select {
+        border: 2px solid #bcbec0;
+    }
+
+    .sign .content-area li a span {
+        background-size: contain !important;
+    }
+
+    .agree label {
+        letter-spacing: -1px;
+    }
+
+    .sign_info div.email input {
+        width: 89%;
+    }
+
+    .sign_info .email button {
+        width: 100%;
+    }
+}
+
+.sign .content-area li a.act span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/login/signin-act.png) left top no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+    .sign .content-area li a:hover span {
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/login/signin-hover.png) left top no-repeat;
+    }
+
+    .sign .content-area li a:active span {
+        background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/login/signin-act.png) left top no-repeat;
+    }
+}
+
+#header nav ul.nav-2d li.prefer {
+    width: 100%;
+    text-align: right;
+    color: #248ab2;
+}
+
+#header nav ul.nav-2d li.prefer a {
+    width: 20%;
+    text-align: right;
+    margin: 6px 0 0 80%;
+}
+
+#header nav ul.nav-2d li.prefer a:hover {
+    background: none;
+    color: #248ab2;
+}
+
+#header nav ul.nav-2d li.prefer img {
+    margin-top: -3px;
+    padding-right: 5px;
+}
+
+#preference {
+    margin: 0 auto;
+}
+
+#preference>header {
+    background: #248ab2;
+    height: 40px;
+    overflow: hidden;
+}
+
+#preference>header h1 {
+    padding-left: 20px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 1.333333333333333em;
+    /*24/36*/
+    float: left;
+}
+
+#preference>header a {
+    float: right;
+}
+
+#preference section.level-wrap article {
+    padding: 0 26px;
+}
+
+#preference .sign {
+    padding: 0;
+}
+
+#preference .sign .content-area {
+    padding: 0 2.03252032520325% 0;
+}
+
+/* 2017.09.14 System Check Page */
+.system {
+    margin-top: 30px;
+    padding: 0 30px 30px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: #eff9fe;
+}
+
+.system h2 {
+    font-size: 1.2rem;
+    /*24/18*/
+    text-align: left;
+    padding-top: 28px;
+    padding-bottom: 5px;
+    letter-spacing: -.05em;
+    color: #248ab2;
+}
+
+.system p {
+    padding-left: 20px;
+    font-size: 1rem;
+    /*20/18*/
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+.system p span {
+    font-size: 0.6rem;
+    display: inline-block;
+    vertical-align: 3px;
+}
+
+#HighlightsLibrary .section .ad_video {
+    margin-top: 4.5%;
+    padding: 4.5% 0 11%;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/ad_video.png) no-repeat center top;
+}
+
+#HighlightsLibrary .section .ad_video>.container {
+    height: inherit;
+}
+
+#HighlightsLibrary .section .ad_video>.container video,
+#HighlightsLibrary .section .ad_video>.container iframe {
+    width: 100%;
+    height: 60%;
+}
+
+@media screen and (max-width: 1044px) {
+    #HighlightsLibrary .section .ad_video {
+        padding: 8% 0 14%;
+    }
+}
+
+/* 20180521 pop-up */
+#notice-layer.notice-pop-up .level-layer {
+    margin-top: 42px;
+    background: #fff url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/mypage/notice-pop-up-bg.png) no-repeat center bottom;
+}
+
+#notice-layer div.level-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+    border-radius: 15px 15px 5px 5px;
+    -moz-border-radius: 15px 15px 5px 5px;
+    -webkit-border-radius: 15px 15px 5px 5px;
+    border: 0 none;
+}
+
+.notice-pop-up .level-layer h1 {
+    height: 10px;
+    font-weight: bold;
+}
+
+.notice-pop-up-close {
+    position: absolute;
+    top: -39px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.notice-pop-up .level-layer h2 {
+    padding: 35px 30px 10px;
+    font-size: 1em;
+}
+
+.notice-pop-up .level-layer h2 p {
+    padding-bottom: 8px;
+}
+
+.notice-pop-up .level-layer h2 .over {
+    color: #ed1c24;
+}
+
+.notice-pop-up .level-layer h2 .con {
+    font-size: 17px;
+}
+
+.notice-pop-up .close-check {
+    position: absolute;
+    bottom: 85px;
+    left: 96px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.notice-pop-up .close-check input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+/* 20180614 books.hmtl */
+.book-wrap .area-wrap .books,
+.book-wrap .area-wrap .videos {
+    padding: 0;
+    border-bottom: 1px solid #e6e7e8;
+}
+
+.book-wrap .area-wrap ul.content-area.books,
+.book-wrap .area-wrap ul.content-area.videos {
+    width: 100%;
+    padding: 0 0 15px;
+    overflow: hidden;
+}
+
+.book-wrap ul.content-area.books li,
+.book-wrap ul.content-area.videos li {
+    float: left;
+    width: 9.34959349593496%;
+    /*92/984*/
+    margin-right: 0.71138211382114%;
+    /*7/984*/
+    margin-bottom: 0;
+}
+
+.book-wrap ul.content-area.books li:last-child {
+    margin-right: 0;
+}
+
+.area-wrap .content-area.books li a,
+.area-wrap .content-area.videos li a {
+    display: block;
+    position: relative;
+}
+
+.content-area.books li a h1,
+.content-area.videos li a h1 {
+    font-size: 0.6112em;
+    /*11px*/
+    letter-spacing: -1px;
+}
+
+.area-wrap .content-area.books li a span,
+.area-wrap .content-area.videos li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.area-wrap .content-area.books li a.act span,
+.area-wrap .content-area.videos li a.act span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/books-act.png) left top no-repeat;
+    background-size: contain;
+}
+
+.area-wrap .content-area.books li a.hover span,
+.area-wrap .content-area.videos li a.hover span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/books-hover.png) left top no-repeat;
+    background-size: contain;
+}
+
+.area-wrap .content-area.books li a:active span,
+.area-wrap .content-area.videos li a:active span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/books-act.png) left top no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 960px) {
+    .book-wrap ul.content-area.books li {
+        width: 15.85365853658537%;
+        /*156/984*/
+        margin-right: 5.08130081300813%;
+        /*50/984*/
+        margin-bottom: 1.1359em;
+    }
+
+    .book-wrap .area-wrap ul.content-area.books {
+        padding: 0px 16.26016260162602% 15px;
+        /*160/984*/
+    }
+
+    .area-wrap .content-area.books li:nth-child(5n+5) {
+        margin-right: 0;
+    }
+
+    .area-wrap .content-area.books li:nth-child(n+5) {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .books .content-area li a h1 {
+        height: inherit;
+    }
+}
+
+/* videos content area */
+.book-wrap ul.content-area.videos li {
+    width: 12.349593%;
+    margin: 0 2% !important;
+}
+
+@media screen and (max-width: 960px) {
+    .book-wrap .area-wrap ul.content-area.videos {
+        padding: 0px 0 15px;
+        /*160/984*/
+    }
+}
+
+/* 2018-06-19 reward ** CDN */
+main.sub-cmm section.reward {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /*     background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/reward/content-bg.png) left top no-repeat; */
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/reward/content/content-bg.png) left top no-repeat;
+    background-size: cover;
+}
+
+main.sub-cmm section.reward>.off {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+svg .books.on {
+    opacity: 0;
+}
+
+@-webkit-keyframes bounce {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes bounce {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.655, 0.05, 0.755, 0.06);
+        animation-timing-function: cubic-bezier(0.655, 0.05, 0.755, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.655, 0.05, 0.755, 0.06);
+        animation-timing-function: cubic-bezier(0.655, 0.05, 0.755, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+svg .bounce.on {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+svg .road.on {
+    fill: #248ab2;
+}
+
+svg .books.on {
+    pointer-events: none;
+}
+
+.on {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 323%;
+}
+
+.on svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.step-off {
+    display: none;
+}
+
+.step-on {
+    display: block;
+}
+
+.hidden, .certi {
+    cursor: pointer;
+}
+
+.reward300 .on {
+    padding-bottom: 156%;
+}
+
+main.sub-cmm section.reward.reward300 {
+    padding: 0;
+    /*     background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/reward/content300-bg.png) left top no-repeat; */
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/reward/content/content300-bg.png) left top no-repeat;
+    background-size: cover;
+}
+
+/* reward pop-up */
+#layer.certificate {
+    /* width: 890px;
+    height: 759px; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 9999;
+}
+
+#layer.hidden-pictures {
+    width: 890px;
+    height: 597px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 9999;
+}
+
+.certificate #reward, .hidden-pictures #reward {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px 15px;
+    border-top: 7px solid #248ab2;
+    z-index: 200;
+    width: 890px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.hidden-pictures #reward {
+    padding: 0;
+}
+
+/* .hidden-pictures #reward{
+    padding: 10px 10px 10px;
+} */
+#layer.hidden-pictures.type2 {
+    width: 870px !important;
+    height: 750px;
+}
+
+.hidden-pictures.type2 #reward {
+    width: 100%;
+}
+
+.hidden-pictures.type2 #reward iframe {
+    height: 42rem;
+}
+
+@media screen and (max-width: 768px) {
+    #layer.hidden-pictures.type2 {
+        width: 450px !important;
+        height: 870px;
+    }
+
+    .hidden-pictures.type2 #reward iframe {
+        height: 48rem;
+    }
+}
+
+#layer.certificate h2 {
+    position: absolute;
+    top: 49%;
+    /* 49%; */
+    left: 50%;
+    transform: translate(-50%, -58%);
+}
+
+#layer.certificate .printBtn {
+    float: right;
+    margin-top: 10px;
+    width: 16.85393258426966%;
+    /*150/890*/
+    height: 45px;
+}
+
+#layer.certificate .printBtn img {
+    margin-right: 5px;
+}
+
+#layer.certificate .certi-bg {
+    position: relative;
+    text-align: center;
+}
+
+#reward .btn-cyan {
+    border: 1px solid #248ab2;
+}
+
+/* 230526 - 7.0 팝업과 스타일 통일을 위해 추가 */
+.certificate #reward{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 40px;
+}
+
+.certificate #reward img{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 
 }
 
+#layer.certificate .printBtn{
+    width: 160px;
+    height: auto;
+    line-height: 1;
+    padding: 14px 0;
+    margin: 0 auto;
+    margin-bottom: 36px;
+    background-color: #4356A4;
+    border-radius: 100px;
+    box-shadow: none;
+    transition: 0.3s;
+}
 
-@media ( max-width : 500px ){
-  .section02 .con .item02 ul li{ height: auto; }
-  .section02 .con .item02 ul li a{ flex-direction: column; }
-  .section02 .con .item02 ul li a .img_wrap{ width: 100%; height: 160px; margin: 0; }
-  .section02 .con .item02 ul li a .text_wrap{ width: 100%; }
+#layer.certificate .printBtn:hover{
+    top: 0;
+    transform: translateY(-4px);
+}
+
+.layer-close{
+    width: 64px;
+    height: 64px;
+    right: -64px;
+    top: -64px;
+    background-color: #4356A4;
+    border-radius: 100px;
+}
+
+.layer-close a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.layer-close a img{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* 230526 - 7.0 팝업과 스타일 통일을 위해 추가 */
+
+@media screen and (max-width: 1024px) {
+    #layer.certificate {
+        width: 768px;
+        height: 610px;
+    }
+
+    #layer.hidden-pictures {
+        /* width: 768px; */
+        /* height: 467px; */
+    }
+
+    /* .hidden-pictures #reward  */
+    .certificate #reward {
+        width: 90%;
+    }
+
+    #layer.certificate h2 {
+        top: 54%;
+        /* 49%; */
+        width: 20%;
+    }
+}
+
+/* 20180905 NEW 컨텐츠 추가 */
+.book-new {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 25.54347826086957%;
+    /*47/184*/
+}
+
+.today-home .tbh-wrap .act-readers img {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    width: 89%;
+}
+
+.book .book-new img, .book .act-readers img {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    width: 89%;
+}
+
+.act-readers {
+    position: absolute;
+    bottom: 5px;
+    left: 4px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 960px) {
+    .book-new {
+        right: 9px;
+    }
+}
+
+.book .book-new img, .book .book-finish img {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* 20190226 finish 추가 */
+.book-finish {
+    position: absolute;
+    bottom: 2px;
+    right: 11px;
+    width: 26.08695652173913%;
+    /*48/184*/
+}
+
+/* 20181128 support 페이지 수정 */
+.service-box {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #eff8f9;
+    font-size: 14px;
+}
+
+.service-box h3 {
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+    font-size: 1.7143em;
+    /*24px*/
+    font-weight: bold;
+}
+
+.service-box div {
+    float: left;
+}
+
+.service-box img {
+    float: left;
+    margin-right: 10px;
+}
+
+.service-box .bar {
+    margin: 3px 20px;
+    width: 1px;
+    height: 35px;
+    background: #d4e0e5;
+}
+
+.service-box .call {
+    min-width: 250px;
+    padding-top: 3px;
+}
+
+.service-box .e-mail {
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.service-box ul {
+    float: left;
+}
+
+.service-box li span {
+    font-weight: bold;
+    color: #248ab2;
+}
+
+@media screen and (max-width: 960px) {
+    .service-box h3 {
+        font-size: 1.1429em;
+        /*16px*/
+    }
+
+    .service-box .bar {
+        margin: 3px 15px;
+    }
+}
+
+/* 190220 Privacy Policy Agreement */
+.agreement-wrap {
+    padding: 50px;
+}
+
+.agreement-wrap h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.agreement-wrap .box {
+    /* height: 655px; */
+    margin-top: 10px;
+    overflow-y: auto;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #dcddde;
+}
+
+.agreement-wrap .check {
+    padding: 30px 0 20px 20px;
+    text-align: left;
+}
+
+.agreement-wrap .check span {
+    text-decoration: underline;
+}
+
+/* 190408 My History(abatar) */
+.avatar {
+    position: relative;
+    overflow: hidden;
+    padding: 2% 0;
+}
+
+.avatar li {
+    float: left;
+    width: 20%;
+    /*128/640*/
+    text-align: center;
+}
+
+.avatar li h2.fav {
+    float: none;
+    width: 93%;
+    margin: 0 auto 20px;
+}
+
+.avatar li h2.fav.act {
+    background-color: #248ab2;
+    color: #fff;
+}
+
+.avatar li a {
+    display: block;
+    position: relative;
+}
+
+.avatar li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar li a.act span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/books-act.png) center bottom no-repeat;
+    background-size: contain;
+}
+
+.avatar li a.hover span {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/books-hover.png) center bottom no-repeat;
+    background-size: contain;
+}
+
+.avatar li a img {
+    width: 94%;
+}
+
+.avatar button {
+    float: right;
+    width: 15.625%;
+    /*100/640*/
+    margin-top: 20px;
+    padding: 1.3% 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .avatar button,
+    .portraitStateWrap.parent_report p+button {
+        font-size: 15px;
+        padding: 0.5% 0;
+    }
+
+    .portraitStateWrap.parent_report p {
+        font-size: 0.6em;
+    }
+
+    .myPageWrap .portraitWrap .txt {
+        font-size: 1em;
+    }
+
+    .myPageWrap .portraitWrap button {
+        font-size: 0.6em;
+        height: 25px;
+        line-height: 25px;
+        margin-top: 5px;
+    }
+
+    .myPageWrap .portraitWrap button img {
+        width: 17px;
+        margin-top: -3px;
+        margin-right: 4px;
+    }
+
+    .assignment.book-list .video {
+        height:21.191406vw;
+        min-height: 164px;
+    }
+.assignment.book-list .video .hv-menu,
+    .assignment.book-list .video .hv-menu>div{
+        height:6.445313vw;
+        margin-top:-3.222656vw;
+        min-height: 49px;
+    }
+
+}
+
+/* 190328 assignment-new */
+.info-btn {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.func_btn {
+    clear: both;
+    text-align: right;
+}
+
+.func_btn button {
+    background: none;
+    cursor: pointer;
+}
+
+table.one th {
+    padding: 0 20px;
+}
+
+table.one li {
+    float: left;
+    width: 25%;
+    margin: 0;
+    padding: 30px;
+}
+
+table.one .folders-books.list li {
+    padding: 30px 15px;
+}
+
+.folders-books li .hv-menu.two div {
+    width: 67%;
+}
+
+li .hv-menu.two div {
+    width: 67%;
+}
+
+li .hv-menu.two a:nth-child(2) {
+    position: inherit;
+    left: auto;
+    right: 0;
+}
+
+.folders-books .hv-menu.two a:nth-child(2) {
+    position: inherit;
+    left: auto;
+    right: 0;
+}
+
+.more img {
+    width: 4%;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    right: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+table.one li h3 {
+    padding: 20px 0 10px;
+    height: 65px;
+    text-align: center;
+    font-size: 1em;
+}
+
+table.one li p {
+    color: #248ab2;
+    text-align: center;
+}
+
+table.one .slide li>img {
+    border: 1px solid #c6c6c6;
+}
+
+.btn_gray {
+    margin: 0 4px 0 1px;
+    padding: 0;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    font-size: 0px;
+    color: #727272;
+    border: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn_gray span {
+    position: relative;
+    height: 26px;
+    display: block;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    color: #727272;
+    white-space: nowrap;
+}
+
+a.btn_gray {
+    color: #727272;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_gray span img {
+    position: relative;
+    top: -1px;
+}
+
+.btn_gray.ver1 {
+    background: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/btn_gray_ver1.png') no-repeat;
+}
+
+.btn_gray.ver1 span {
+    position: relative;
+    right: -3px;
+    padding: 0 29px 0 26px;
+    background: url('https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/common/btn_gray_ver1_side.png') right top no-repeat;
+}
+
+/* Assignment Detail 팝업 */
+#Lists_wrapper, #videoLists_wrapper, #activityLists_wrapper {
+    margin-bottom: 20px;
+}
+
+.new-assignment {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.pop_wrapper .header {
+    position: relative;
+    padding: 18px 20px;
+    background: #4356a4;
+}
+
+.pop_wrapper .header h1 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+
+.pop_wrapper .close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.new-assignment .detail {
+    margin: 40px 0;
+}
+
+table.listB th {
+    border-top: 1px solid #e3d1cf;
+    text-align: center;
+}
+
+table.listB.level td {
+    height: 40px;
+    padding: 0px 5px;
+}
+
+table.listB td {
+    border-top: 1px solid #e3d1cf;
+    border-bottom: 1px solid #e3d1cf;
+}
+
+table.listB th, table.listB tfoot td {
+    /* padding: 10px 1px; */
+    background-color: #faf6f5;
+}
+
+table.listB.level td {
+    height: 40px;
+    padding: 0px 5px;
+}
+
+table.inputA {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #dcddde;
+    table-layout: fixed;
+}
+
+table.inputA th, table.inputA td {
+    border-bottom: 1px solid #dcddde;
+    text-align: center;
+}
+
+table.inputA th {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #faf6f5;
+    font-size: 12px;
+    color: #727272;
+}
+
+table.inputA td {
+    padding: 7px 0;
+}
+
+table.inputA td select {
+    border: 1px solid #a1a1a1;
+    padding: 3px 5px;
+}
+
+table.inputA td input[type="text"],
+table.inputA td input[type="email"],
+table.inputA td input[type="password"] {
+    width: 80%;
+}
+
+.pop_wrapper.new-assignment td.slide {
+    position: relative;
+    padding: 0 10%;
+    text-align: inherit;
+}
+
+.new-assignment .detail li {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+.new-assignment .folders-prev {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    margin-top: -17.5px;
+    cursor: pointer;
+}
+
+.new-assignment .folders-next {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    margin-top: -17.5px;
+    cursor: pointer;
+}
+
+.folders-books.list {
+    width: 782px !important;
+}
+
+caption {
+    position: relative;
+    position: absolute;
+    left: -5000px;
+    top: 0;
+    visibility: hidden;
+    overflow: hidden;
+    line-height: 0.1%;
+    font-size: 0.1%;
+    width: 0.1%;
+    height: 0.1%;
+}
+
+/* /Assignment Detail 팝업 */
+@media screen and (max-width: 960px) {
+    table.one th {
+        font-size: 0.7em;
+        /*13/18*/
+    }
+
+    .new-assignment .detail li:first-child img {
+        left: 20px;
+    }
+
+    .new-assignment .detail li:last-child img {
+        right: 20px;
+    }
+
+    .new-assignment table.one li p, .new-assignment table.one li h3 {
+        font-size: 13px;
+    }
+
+    .pop_wrapper.new-assignment td.slide {
+        padding: 0 6%;
+    }
+
+    .new-assignment .folders-prev {
+        left: 1%
+    }
+
+    .new-assignment .folders-next {
+        right: 1%;
+    }
+
+    table.one li {
+        padding: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .book-wrap .folders-books.list {
+        width: 600px !important;
+        height: 360px;
+        margin: 0 auto;
+    }
+
+    .new-assignment .detail li {
+        padding: 0 1%;
+    }
+}
+
+/* 190402 assignment 추가수정 */
+table.blue tbody td.name {
+    padding-left: 20px;
+    color: #4356a4;
+    border-bottom: none;
+    text-align: left;
+}
+
+.blue.one td {
+    text-align: inherit;
+}
+
+.book-wrap .folders-books {
+    padding-top: 0;
+}
+
+.book-wrap .folders-books .book-new, .book-wrap .folders-books .book-finish {
+    width: 23%;
+}
+
+.folders-books .con {
+    text-align: center;
+}
+
+/* 190522 My History */
+.history-tabs {
+    margin: 20px 20px 30px;
+    overflow: hidden;
+}
+
+.history-tabs li {
+    float: left;
+    width: 33.33333333333333%;
+    padding: 10px 15px;
+    background-color: #f3f7f9;
+    text-align: center;
+    cursor: pointer;
+}
+
+.history-tabs li.two {
+    float: left;
+    width: 50%;
+    padding: 10px 15px;
+    background-color: #f3f7f9;
+    text-align: center;
+    cursor: pointer;
+}
+
+.history-tabs.two li {
+    width: 50%;
+}
+
+.history-tabs.four li {
+    width: 25%;
+}
+
+.history-tabs li.current {
+    color: #248ab2;
+    border-bottom: 2px solid #248ab2;
+}
+
+.history-tab-content {
+    display: none;
+    padding: 0 20px;
+}
+
+.history-tab-content td img.comment {
+    /* width: 18%; */
+    margin: -5px 3px 0 -21px;
+    cursor: pointer;
+}
+
+.history-tab-content.current {
+    display: inherit;
+}
+
+.history-tab-content table th.purple {
+    background-color: #8e47b6;
+}
+
+.history-tab-content table th.red {
+    background-color: #eb4335;
+}
+
+.history-tab-content table th.yellow {
+    background-color: #ffcc00;
+}
+
+.history-tab-content table th.green {
+    background-color: #01c78a;
+}
+
+.history-tab-content table .gray {
+    background-color: #f8f8f8;
+}
+
+.history-tab-content table a:hover {
+    text-decoration: underline;
+}
+
+.pop_wrapper .tabs li {
+    float: right;
+    width: 18%;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 0.7778em;
+    border: 1px solid #dcddde;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pop_wrapper .tabs li:first-child {
+    margin-right: 0;
+}
+
+.pop_wrapper .tabs li.current {
+    color: #414042;
+    background-color: #f8f8f8;
+}
+
+.pop_wrapper .tabs li.current, .pop_wrapper .tab-content.current {
+    display: inherit;
+}
+
+.pop_wrapper .tab-content {
+    padding: 15px 0 10px;
+}
+
+.pop_wrapper .tab-content td {
+    position: relative;
+    height: auto;
+    padding: 10px;
+    overflow: inherit;
+    white-space: initial;
+    word-break: normal;
+}
+
+.pop_wrapper .tab-content td:last-child {
+    font-weight: bold;
+}
+
+.pop_wrapper .tab-content td.green {
+    color: #2f9f2a;
+    font-weight: bold;
+}
+
+.pop_wrapper .tab-content td.yellow {
+    color: #ffc000;
+    font-weight: bold;
+}
+
+.pop_wrapper .tab-content td.red {
+    color: #da2739;
+    font-weight: bold;
+}
+
+.pop_wrapper .tab-content h4 {
+    margin: 30px 0 15px;
+    font-weight: bold;
+}
+
+.pop_wrapper .tab-content .box {
+    height: 100px;
+    padding: 15px;
+    font-size: 0.7778em;
+    border: 1px solid #e6e7e8;
+    overflow-y: auto;
+}
+
+.icn-pass {
+    height: 22px;
+    /* display: block; */
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn-pass.png) center center no-repeat;
+}
+
+.icn-non-pass {
+    height: 22px;
+    /* display: block; */
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/icn/icn-non-pass.png) center center no-repeat;
+}
+
+@media screen and (max-width: 960px) {
+    .history-tab-content td img.comment {
+        margin: -19px 1px 0 -14px;
+    }
+}
+
+/* 190607 FTUX-step1 */
+.sign .avatar li a img {
+    width: 100%;
+}
+
+.sign .content-area.avatar {
+    padding: 54px 2.03252032520325% 70px;
+}
+
+.sign .content-area.avatar li a h2.fav {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    line-height: 40px;
+    font-size: 1em;
+    margin: 15px auto;
+}
+
+.sign .content-area.avatar li a:hover span,
+.sign .content-area.avatar li a.act span {
+    background-position-y: bottom;
+}
+
+/* 190624 videos */
+ul.video-wrap li {
+    float: left;
+    width: 23.78048780487805%;
+    /*234/984*/
+    margin-bottom: 0;
+}
+
+ul.video-wrap li .video {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ul.video-wrap li div img {
+    border: 1px solid #d1d3d4;
+}
+
+ul.video-wrap li .video:hover div.hv-menu {
+    display: block;
+}
+
+ul.video-wrap li:nth-child(4n+4) {
+    margin-right: 0;
+}
+
+.video .hv-menu {
+    width: 100%;
+    left: 0;
+}
+
+.video .hv-menu div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -10.1010101010101% auto 0;
+    /* 10/99 */
+    width: 67.52136752136752%;
+    /* 158/234 */
+    height: 66px;
+    overflow: hidden;
+}
+
+.assignment.book-list .video .hv-menu div {
+    width: 88.62275449101796%;
+    margin: -13.2011101% auto 0;
+}
+
+.folders-books .video .hv-menu div {
+    width:100%;
+}
+
+.video .hv-menu.two div {
+    width: 50%;
+}
+
+ul.video-wrap li p {
+    height: 27px;
+    font-size: 0.6567rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.video .book-new {
+    top: 0;
+    right: -1px;
+    width: auto;
+}
+
+.video .book-finish {
+    bottom: -2px;
+    right: -1px;
+    width: auto;
+}
+
+.video .book-new img, .video .book-finish img {
+    border: none;
+}
+
+@media screen and (max-width: 960px) {
+    .video .hv-menu {
+        height: 45px;
+        margin: -22.5px auto 0;
+    }
+
+    .video .book-new, .video .book-finish {
+        width: 20%;
+    }
+
+    .video .hv-menu div {
+        margin: -9.09090909090909% auto 0;
+        /* 9/99 */
+    }
+
+    .assign-list .folders-books .video .hv-menu,.assign-list .folders-books .video .hv-menu>div {
+        height:4.394531vw;
+        margin-top:-22px;
+    }
+}
+
+/* 190625 tabs */
+.tabs {
+    overflow: hidden;
+}
+
+.tabs li {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+/* 190625 tabs + my favorite */
+.book-wrap .myf-tabs li {
+    width: 50%;
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    color: #a7a9ac;
+    background-color: #f3f7f9;
+    border-top: 1px solid #b1c1cd;
+    cursor: pointer;
+}
+
+.myf-tabs li.current {
+    color: #fff;
+    background-color: #b1c1cd;
+}
+
+.tab-content {
+    padding: 15px;
+}
+
+/* 190708 books+videos */
+@media screen and (max-width: 450px) {
+    main section.book-list.sub-cmm {
+        margin-bottom: 40%;
+    }
+}
+
+/* 4.0개편 */
+/* students */
+main#students {
+    padding: 0;
+}
+
+#students .diagonal.diagonal200 {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students_diagonal_200.png) center top no-repeat;
+}
+
+#students .section {
+    padding: 100px 0;
+}
+
+#students .section:first-child {
+    padding: 0;
+}
+
+#students .section .sub-main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #4356a4 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-main.png) center top no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#students .section .main-title-wrap {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;
+}
+
+#students .section .main-title-wrap .main-title {
+    position: absolute;
+    margin: -140px 0 0 0;
+    top: 47%;
+    right: 5px;
+}
+
+#students .section p {
+    padding-bottom: 40px;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: -.5px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+}
+
+#students .section h2.title {
+    height: auto;
+    padding-bottom: 20px;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#students .section.type1 {
+    padding-top: 70px;
+    text-align: center;
+    background-color: #4356a4;
+    background: #4356a4 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-type1-pattern.png) center top no-repeat;
+}
+
+#students .section .l-content {
+    font-size: 24px;
+}
+
+#students .section.type1 .btn-video {
+    padding-top: 38px;
+}
+
+#students .section.type2 {
+    background: #21bcf6 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-type2-pattern.png) center 35% no-repeat;
+}
+
+#students .section.type2 .title {
+    color: #1a586f;
+}
+
+#students .section.type2 .swiper-slide {
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+#students .section.type2 .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 1;
+}
+
+#students .section.type2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #1a586f !important;
+}
+
+#students .section.type3 {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding: 150px 0;
+    background: #192550 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-type3-pattern.png) center 35% no-repeat;
+    /*     background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/booksForYou-bg.png) repeat; */
+}
+
+#students .section.type3 li:first-child {
+    float: left;
+    width: 49.8046875%;
+    /*510/1024*/
+    margin-right: 4.8828125%;
+    /*50/1024*/
+}
+
+#students .section.type3 li {
+    float: left;
+    width: 45.3125%;
+    /*464/1024*/
+}
+
+#students .section.type3 #today-book-layer {
+    position: relative;
+}
+
+#students .section.type3 .today-book-wrap {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: initial;
+    margin: 0 auto 0;
+}
+
+#students .section.type3 .today-book-wrap h1 {
+    position: relative;
+    width: 343px;
+    top: 0;
+}
+
+#students .section.type3 .today-book-wrap .tbl-bg {
+    width: 286px;
+    height: 342px;
+    margin: -10px auto 0;
+    padding: 60px;
+    background-size: contain;
+}
+
+#students .section.type3 .star {
+    width: 100%;
+    background-size: contain;
+}
+
+#students .section.type3 .today-bg {
+    width: 510px;
+    height: 510px;
+    margin: -330px auto 0;
+    background-size: contain;
+}
+
+#students .section.type3 .today-book-wrap button {
+    display: block;
+    margin: 13px auto 0;
+}
+
+#students .section.type3 li .s-title {
+    padding-top: 50px;
+    color: #fff45f;
+}
+
+#students .section li .s-title {
+    padding-bottom: 20px;
+    font-size: 46px;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+#students .section .s-content {
+    font-size: 17px;
+    text-align: left;
+    line-height: 26px;
+}
+
+#students .section.type4 {
+    width: 100%;
+    position: relative;
+    height: 855px;
+    overflow: hidden;
+    background: #248ab2 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-type4-pattern.png) center 50% no-repeat;
+}
+
+#students .section.type4 h2.title {
+    color: #124458;
+}
+
+#students .section.type4 ul {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+#students .section.type4 li {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+#students .section.type4 li .content {
+    position: absolute;
+    width: 100%;
+    top: 27px;
+    left: 0;
+}
+
+#students .section.type4 li.slide {
+    width: 45.5078125%;
+    /*466/1024*/
+    margin-right: 5.6640625%;
+    /*58/1024*/
+}
+
+#students .section.type4 .slide-wrap {
+    width: 81.5450643776824%;
+    /*380/466*/
+    position: absolute;
+    bottom: 17px;
+    left: 9.44206008583691%;
+    /*44/520*/
+}
+
+#students .section.type4 .mobile {}
+
+#students .section.type4 li.app {
+    width: 48.828125%;
+    /*500/1024*/
+    padding-top: 45px;
+    text-align: center;
+}
+
+#students .section.type5 {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/students-type5-bg.png) center top no-repeat;
+    background-size: cover;
+}
+
+#students .section.type5 ul {
+    overflow: hidden;
+}
+
+#students .section.type5 li {
+    float: left;
+}
+
+#students .section.type5 li.content {
+    width: 44.921875%;
+    /*460/1024*/
+    margin-right: 3.41796875%;
+    /*35/1024*/
+}
+
+#students .section.type5 h2.s-title {
+    color: #248ab2;
+    text-align: left;
+}
+
+#students .section.type5 p.s-content {
+    color: #5b5b5b;
+}
+
+#students .section.type5 li.reward {
+    width: 48.33984375%;
+    /*495/1024*/
+}
+
+#students .section.type5 li.reward .box {
+    margin-top: 125px;
+    padding-top: 30px;
+    border: 5px solid #248ab2;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#students .section.type5 li.reward .box .on {
+    padding-bottom: 43%;
+}
+
+#students .section.type5 li.reward .btn-wrap {
+    padding-top: 25px;
+    text-align: center;
+}
+
+#students .section.type5 li.reward .btn {
+    display: inline-block;
+    width: 46.46464646464646%;
+    /*230/495*/
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+#students .section.type5 li.reward .btn a {
+    display: block;
+    color: #fff;
+}
+
+#students .section.type5 li.reward .btn.blue {
+    margin-right: 10px;
+    background-color: #248ab2;
+}
+
+#students .section.type5 li.reward .btn.red {
+    background-color: #ec3b16;
+}
+
+#students .section.type5 .btn-demo {
+    margin: 110px auto 0;
+}
+
+.btn-demo {
+    text-align: center;
+}
+
+#signin.popUp input[type='text'], #signin.popUp select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#signin.popUp .two input[type='text'] {
+    float: left;
+    width: 49%;
+}
+
+#signin.popUp div button {
+    width: 60%;
+    height: 50px;
+}
+
+/* Educators */
+#students.educators .section .sub-main {
+    background: #7a8acf url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-main.png) center top no-repeat;
+    background-size: cover;
+}
+
+#students.educators .diagonal.diagonal200 {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators_diagonal_200.png) center top no-repeat;
+}
+
+#students.educators .section .main-title-wrap .main-title {
+    top: inherit;
+    bottom: 25%;
+}
+
+#students.educators .type1 {
+    background: #7a8acf url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-type1-pattern.png) center top no-repeat;
+}
+
+#students.educators .section.type1 .title {
+    color: #35458c;
+}
+
+#students.educators .type2 {
+    background: #5cb6bb url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-type2-pattern.png) center 20% no-repeat;
+}
+
+#students.educators .section.type2 .title {
+    color: #246468;
+}
+
+#students.educators .section.type2 ul {
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+#students.educators .section.type2 ul li {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#students.educators .section.type2 ul li p.num {
+    padding: 25px 0 15px;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#students.educators .section.type2 ul li p.caption {
+    color: #276a6e;
+    font-size: 24px;
+}
+
+#students.educators .type3 {
+    overflow: hidden;
+    height: auto;
+    padding: 150px 0 180px;
+    background: #9e88b9 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-type3-pattern.png) 15% 80% no-repeat;
+}
+
+#students.educators .section.type3 .title {
+    padding-bottom: 55px;
+    color: #5e4082;
+}
+
+#students.educators .type3 ul {
+    overflow: hidden;
+}
+
+#students.educators .section.type3 ul li.slides {
+    position: relative;
+    width: 50.29296875%;
+    margin-right: 3.90625%;
+}
+
+#students.educators .section.type3 ul li.slides .slide-wrap {
+    position: absolute;
+    top: 5.7%;
+    left: 4.7%;
+    width: 90.48543689320388%;
+    /*466/1024*/
+}
+
+#students.educators .section.type3 ul li.content {
+    width: 45.80078125%;
+    /*469/1024*/
+    font-weight: 300;
+    letter-spacing: -.5px;
+    color: #fff;
+}
+
+#students.educators .swiper-pagination-bullet-active {
+    background: #5e4082 !important;
+}
+
+#students.educators .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 4px;
+}
+
+#students.educators .section.type3 .container {
+    background: none;
+}
+
+#students.educators .section.type3 .kid {
+    position: absolute;
+    bottom: -33%;
+    right: -9%;
+    width: 67.7734375%;
+    /*694/1024*/
+}
+
+#students.educators .type4 {
+    height: auto;
+    background: #345fc0 url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-type4-pattern.png) center 20% no-repeat;
+}
+
+#students.educators .section.type4 .title {
+    color: #112a62;
+}
+
+#students.educators .section.type4 .slider {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#students.educators .section.type4 .slick-slide {
+    margin: 0px -30px;
+}
+
+#students.educators .section.type4 .slick-slide img {
+    width: 100%;
+}
+
+#students.educators .section.type4 .slick-prev {
+    position: absolute;
+    top: 43%;
+    left: -8.5%;
+    width: 55px;
+    height: 55px;
+    font-size: 0px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-slide-prev.png) center 20% no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#students.educators .section.type4 .slick-next {
+    position: absolute;
+    top: 43%;
+    right: -8.5%;
+    width: 55px;
+    height: 55px;
+    font-size: 0px;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/educators-slide-next.png) center 20% no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#students.educators .section.type4 .slick-list {
+    padding: 0 200px !important;
+}
+
+#students.educators .section.type4 .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+#students.educators .section.type4 .slick-active {
+    opacity: .5;
+}
+
+#students.educators .section.type4 .slick-current {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+
+#students.educators .btn-demo {
+    padding-top: 60px;
+}
+
+/* About Highlights */
+#students.highlights .diagonal.diagonal200 {
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/diagonal_200.png) center bottom no-repeat;
+}
+
+#students.highlights .section .sub-main {
+    background: #fff url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/aboutUs/highlights-main.png) center top no-repeat;
+    background-size: cover;
+}
+
+#students .section .main-title-wrap .main-title {
+    top: inherit;
+    bottom: 17%;
+}
+
+#students.highlights .section.type1 {
+    background: #fff;
+}
+
+#students.highlights .section.type1 p {
+    color: #7a7a7a;
+}
+
+#students.highlights .section.type2 {
+    background: #1e7da7;
+}
+
+#students.highlights .section.type2 .title {
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+#students.highlights .section.type2 p {
+    margin: 0 auto;
+    padding-bottom: 70px;
+    width: 84.5703125%;
+    /*866/1024*/
+    text-align: left;
+}
+
+#students.highlights .section.type2 button {
+    display: block;
+    width: 270px;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 60px;
+}
+
+#students.highlights .section.type2 button a {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media screen and (max-width: 1044px) {
+    #students .container {
+        width: -webkit-calc(100% - 2.874%);
+        width: -moz-calc(100% - 4.789%);
+        width: calc(100% - 4.789%);
+        min-width: -webkit-calc(100% - 2.604%);
+        min-width: -moz-calc(100% - 2.604%);
+        min-width: calc(100% - 4.789%);
+    }
+
+    #students .section p {
+        font-size: 1.1815em;
+        /*22*/
+    }
+
+    #students .section .s-content {
+        font-size: 0.8056em;
+        /*16*/
+    }
+
+    #students .section .l-content {
+        font-size: 1.1815em;
+        /*22*/
+    }
+
+    #students .section li .s-title {
+        font-size: 2.2556em;
+        /*42*/
+    }
+
+    #students .section.type3 .today-bg {
+        left: -6%;
+    }
+
+    #students .section.type4 {
+        height: 795px;
+    }
+
+    #students .section.type4 .slide-wrap {
+        bottom: 14px;
+    }
+
+    #students .section.type4 li.app img {
+        width: 85%;
+    }
+
+    #students .section.type5 li.reward .btn {
+        font-size: 1.1815em;
+        /*22*/
+    }
+
+    #students.educators .section.type3 .kid {
+        bottom: -41%;
+    }
+
+    #students.educators .type4 {
+        height: auto;
+    }
+
+    #students.educators .section.type4 .slick-prev, #students.educators .section.type4 .slick-next {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #students.educators .type4 {
+        height: auto;
+    }
+
+    #students .section h2.title {
+        font-size: 2.2717em;
+        /*46*/
+    }
+
+    #students .section .s-content {
+        font-size: 0.7408em;
+        /*15*/
+        line-height: 22px;
+    }
+
+    #students .section p, #students .section .l-content {
+        font-size: 0.9877em;
+        /*20*/
+        line-height: 28px;
+    }
+
+    #students .section li .s-title {
+        font-size: 1.7778em;
+        /*36*/
+        letter-spacing: -.5px;
+        line-height: 36px;
+    }
+
+    #students .section.type3 .today-bg {
+        left: -10%;
+    }
+
+    #students .section.type4 {
+        height: 715px;
+    }
+
+    #students .section.type4 .slide-wrap {
+        bottom: 12px;
+    }
+
+    #students .section.type5 li.reward .box {
+        margin-top: 100px;
+    }
+
+    #students .section.type5 li.reward .btn {
+        height: 55px;
+        line-height: 55px;
+        font-size: 0.9877em;
+        /*22*/
+    }
+
+    #students.educators .section.type2 ul li p.caption {
+        font-size: 1.1852em;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #students.educators .type4 {
+        height: auto;
+    }
+
+    #students .section .s-content {
+        font-size: 0.6914em;
+        /*16*/
+    }
+
+    #students .section.type3 .today-bg {
+        left: -15%;
+    }
+
+    #students .section.type4 {
+        height: 682px;
+    }
+
+    #students.educators .section.type3 .kid {
+        bottom: -44%;
+    }
+
+    #students.educators .section.type4 .slick-slide {
+        margin: 0 -20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #students .section.type3 .today-bg {
+        left: -19%;
+    }
+
+    #students.educators .section.type4 .slick-prev, #students.educators .section.type4 .slick-next {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 200302 books layer */
+/*.books-layer {
+    width: 550px;
+    height: 500px;
+    padding: 10px 10px 15px;
+    border-top: 7px solid #248ab2;
+    background-color: #fff;
+}*/
+.books-layer {
+    width: 550px;
+    height: 600px;
+    padding: 10px 10px 15px;
+    border-top: 7px solid #248ab2;
+    background-color: #fff;
+    background: url("https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/badgelayer/web_reward-layer_bg.png") center right no-repeat;
+}
+
+.books-layer h2 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* .books-layer .badge {
+    padding: 40px 0;
+    text-align: center;
+    background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/badgelayer/badge-bg.png) center right no-repeat;
+} */
+.books-layer .badge {
+    padding: 40px 0 30px;
+    text-align: center;
+    /* background: url(https://web-cdn.chungchy.com/Highlights_Global_V6/library/public_html/resource/images/badgelayer/badge-bg.png) center right no-repeat; */
+}
+
+/* .books-layer p {
+    text-align: center;
+} */
+/* .books-layer button {
+    display: block;
+    width: 120px;
+    height: 35px;
+    margin: 25px auto 0;
+} */
+.books-layer button {
+    position: absolute;
+    bottom: 74px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 120px;
+    height: 35px;
+    margin: 25px auto 0;
+}
+
+.books-layer button.btn-cyan:hover {
+    top: initial;
+    bottom: 73px;
+}
+
+.books-layer button.btn-cyan:active {
+    top: initial;
+    bottom: 69px;
+}
+
+.books-layer .spot {
+    margin-top: -21px;
+}
+
+.books-layer .astronaut {
+    margin-top: -55px;
+}
+
+.books-layer .owl {
+    margin-top: -50px;
+}
+
+.books-layer .monster {
+    margin-top: -76px;
+}
+
+/* 200304 agreement */
+.agreement-wrap button img {
+    margin-top: -3px;
+    padding-right: 10px;
+}
+
+.agreement-wrap.ver2 h2 {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.agreement-wrap h3 {
+    font-size: 1em;
+}
+
+.agreement-wrap h3 .icn-bullet {
+    width: 22px;
+    height: 21px;
+    padding-left: 22px;
+    background-position-y: center;
+    font-weight: bold;
+}
+
+.agreement-wrap .two {
+    padding: 30px 0 20px 20px;
+    overflow: hidden;
+}
+
+.agreement-wrap .two div {
+    float: left;
+    padding: 0;
+    font-weight: bold;
+}
+
+.agreement-wrap div .box {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.agreement-wrap .two .more {
+    float: right;
+    text-decoration: underline;
+}
+
+.agreement-wrap .two .more a {
+    color: #248ab2;
+    font-weight: bold;
+}
+
+pre {
+    white-space: pre-wrap;
+    /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
+.agreement-wrap .n-two {
+    overflow: hidden;
+}
+
+#signin.popUp .n-two input[type='text'] {
+    float: left;
+    width: 49%;
+}
+
+/* 200617 Assignment 수정 */
+.folders-books {
+    margin-bottom: 35px;
+}
+
+.folders-books .con .list table {
+    border-top: 1px solid #d1d3d4;
+}
+
+.folders-books .con .list th, .folders-books .con .list td {
+    height: 35px;
+}
+
+.folders-books .con .list th {
+    padding: 0;
+    color: #414042;
+    border-right: 1px solid #d1d3d4;
+    background-color: #f4f6fd;
+}
+
+.folders-books .con .list td:first-child {
+    border-left: 0;
+}
+
+.folders-books .con .list th:last-child, .folders-books .con .list td:last-child {
+    border-right: 0;
+}
+
+.folders-books .con .one th, .folders-books .con .one td {
+    width: 100%;
+}
+
+.folders-books .con .two th, .folders-books .con .two td {
+    width: 50%;
+}
+
+.folders-books.con .three th, .folders-books .con .three td {
+    width: 33.33333%;
+}
+
+#myGoalListBtn {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myGoalListBtn span {
+    width: 16px;
+    height: 18px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* parent report popup */
+.parent_report_popUp_wrap {
+    position: absolute;
+    z-index: 40;
+    width: 580px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.parent_report_popUp {
+    position: relative;
+    background: #fff;
+    padding: 36px;
+    border-radius: 40px;
+}
+
+.parent_report_popUp .layer-close {
+    position: absolute;
+    right: -64px;
+    top: -64px;
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    background-color: #4356A4;
+}
+
+.parent_report_popUp .layer-close a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent_report_popUp .layer-close img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.parent_report_popUp h1 {
+    font-size: 28px;
+    padding-bottom: 36px;
+    color: #262626;
+    text-align: center;
+}
+
+.parent_report_popUp h3 {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.parent_report_popUp h3 span {
+    color: #248ab2;
+    font-weight: 600;
+}
+
+.parent_report_popUp th,
+.parent_report_popUp th{
+    font-size: 20px;
+    height: auto;
+}
+
+.parent_report_popUp .btn_wrap {
+    width: 100%;
+    text-align: center;
+}
+
+.parent_report_popUp .btn_wrap button {
+    padding: 14px 0;
+    width: 30%;
+    font-size: 18px;
+    border-radius: 100px;
+    box-shadow: inherit;
+    transition: 0.3s;
+}
+
+.parent_report_popUp .btn_wrap button:hover{
+    top : 0;
+    transform: translateY(-4px);
+}
+
+.parent_report_popUp .parent_setting {
+    padding: 7px;
+}
+
+.parent_report_popUp .parent_setting input[type="text"] {
+    border: 1px solid #d1d3d4;
+    height: 6.770833333vw;
+    line-height: 6.770833333vw;
+    width: 100%;
+    font-size: 3.33333333333333vw;
+    padding: 0 1vw;
 }
